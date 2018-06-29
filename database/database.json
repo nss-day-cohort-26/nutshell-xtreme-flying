@@ -1,8 +1,87 @@
-{  
-    "users": [],
-    "friends": [],
-    "messages": [],
-    "news": [],
-    "events": [],
-    "tasks": []
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Jack Bob",
+            "email": "jack____bob@jACkbOb.co.r"
+        },
+        {
+            "id": 2,
+            "name": "UMMM ISthename",
+            "email": "magic_hamster@yahoo.com"
+        }
+    ],
+    "friends": [
+        {
+            "id": 1,
+            "userId": 2,
+            "yourId": 1
+        }
+    ],
+    "messages": [
+        {
+            "id": 1,
+            "userId": 2,
+            "message": "These are the important things that I had to say to you, UMMM."
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "message": "Jack Bob, I really don't want to hear from you about anything ever."
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "userId": 2,
+            "url": "news.com/greatthing",
+            "title": "A Thing Happened Today",
+            "synopsis": "Stuff got done.",
+            "timestamp": "13:12 3/12/16"
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "url": "babble.com/newsworthystuff",
+            "title": "I'm Perd Hadley",
+            "synopsis": "And this is my description",
+            "timestamp": "04:01 6/31/14"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "userId": 2,
+            "name": "Swing Dancing",
+            "location": "The park with green stuff in it.",
+            "date": "3/12/16"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "name": "NSS Prom",
+            "location": "NSS",
+            "date": "5/23/18"
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "userId": 2,
+            "Task": "Boogie",
+            "completed": true
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "Task": "Figure out the meaning of life",
+            "completed": false
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "Task": "Ponder existence",
+            "completed": true
+        }
+    ]
 }

@@ -1,32 +1,41 @@
 const $ = require("jquery")
+const ajax = require("../ajaxCalls")
 
 const friendList = Object.create({}, {
     "createFriendsTemplate" : {
         value: function() {
-            $("#friends").append($("<h1>Friends</h1><button id='add-new-friend'>Add New Friend</button>"))
-            $("#friends").append($("<section id='friend-list'></section>"))
+            $("#friends").append($(`
+            <h1>Friends</h1>
+            <div id="find-your-friends">
+                <label for="friend-user-name">Find Friends:</label>
+                <input type="text" id="friend-user-name" name="friend-title" />
+                <button id='add-new-friend'>Add Friend</button>
+            </div>
+            <button id='find-new-friend'>FindFriend</button>
+            <section id='friend-list'></section>`))
         }
     },
     "createFriendListComponent": {
-        value: function(friendName, friendUserId) {
-            $("#friend-list").append($(`<div id=${friendUserId} class='friend-selected'><img class='friend-icon' src='https://image.shutterstock.com/image-vector/add-friend-vector-icon-member-260nw-1085252015.jpg'><div class='friend-name'>${friendName}</div><button id=${friendUserId} class='delete'>X</button></div>`))
-        }
-    },
-    "addFriendModal": {
-        value: function() {
-            console.log("add friend")
-            $("#friends").innerHTML =
-                `<div class="input-group input-group-sm mb-3">
-                    <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-sm">
-                    <button type="button" class="btn btn-dark">Save</button>
-                </div>`
+        value: function(yourId) {
+            ajax.getField(`friends?_expand=user&yourId=${yourId}`).then((friendsArray) => {
+                $("#friend-list").empty()
+                friendsArray.forEach(friend => {
+                    $("#friend-list").append($(`
+                        <div id="friend${friend.user.id}" class='friend-selected'>
+                            <img class='friend-icon' src='https://image.shutterstock.com/image-vector/add-friend-vector-icon-member-260nw-1085252015.jpg'>
+                            <div class='friend-name'>${friend.user.name}</div>
+                            <button id='${friend.id}' class='deleteFriend'>X</button>
+                        </div>
+                    `))
+                })
+            })
         }
     }
 })
-$("#friends").on("click", $("#add-new-friend"), friendList.addFriendModal)
+
+module.exports = friendList
+
 friendList.createFriendsTemplate()
-friendList.createFriendListComponent("Jenn", 1)
-friendList.createFriendListComponent("Leah", 2)
+friendList.createFriendListComponent(1) // hard coded "yourId", will need to be changed with login feature
+
+

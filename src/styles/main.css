@@ -4,7 +4,7 @@
 
 /* Friend List */
 #friends {
-    width: 15%;
+    width: 25%;
     padding-left: 30px;
 }
 
@@ -15,6 +15,10 @@
 .friend-name {
     display: inline-block;
     padding: 4px;
+}
+
+.find-new-friend {
+    display: inline-block;
 }
 
 li {

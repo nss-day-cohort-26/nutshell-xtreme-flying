@@ -68,19 +68,19 @@
         {
             "id": 1,
             "userId": 2,
-            "Task": "Boogie",
+            "task": "Boogie",
             "completed": true
         },
         {
             "id": 1,
             "userId": 1,
-            "Task": "Figure out the meaning of life",
+            "task": "Figure out the meaning of life",
             "completed": false
         },
         {
             "id": 1,
             "userId": 1,
-            "Task": "Ponder existence",
+            "task": "Ponder existence",
             "completed": true
         }
     ]

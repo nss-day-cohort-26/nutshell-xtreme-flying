@@ -1,3 +1,14 @@
 .features {
     border: 1px solid black;
 }
+
+#friends {
+   margin: 1%; 
+   display: flex;
+   height: 25%;
+   width: 25%;
+}
+
+#message-box{
+
+} 

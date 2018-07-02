@@ -11,10 +11,24 @@
 
 .message{
     border-radius: 25px;
+    display: block;
     background: #0B93F6;
     padding:5px 10px;
     max-width: 60%;
     font-family: "Helvetica Neue";
+    float: right;
 	/* font-size: 20px; */
 	font-weight: normal;
 } 
+
+.friendMessage{
+    border-radius: 25px;
+    display: block;
+    background: #E5E5EA;
+    padding:5px 10px;
+    max-width: 60%;
+    font-family: "Helvetica Neue";
+    float: left;
+	/* font-size: 20px; */
+	font-weight: normal;
+}

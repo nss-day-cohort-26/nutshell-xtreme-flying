@@ -45,4 +45,4 @@ class buildTask{
 }
 
 const bTask = new buildTask;
-bTask.taskBones();
+// bTask.taskBones();

@@ -1,20 +1,28 @@
-const $ = require("jquery")
+const $ = require("jquery");
+const ajax = require("./../ajaxCalls.js")
+const currentUser = require("./currentUser")
 
-document.querySelector("#message-btn").addEventListener("click", function () {
-let message = $("#message-input").val()
 
-makeMess = (message, userName) =>  {
-    let mess = document.createElement("p")
-    mess.textContent = message
-    mess.className += "message" 
 
-    // if (userName) {
-    //     mess.className += "user"
-    // } else {
-    //     mess.className += "friend"
-    // }
-    $("#message-box").append(mess)
+const submitMess = function () {
+
+    document.querySelector("#message-btn").addEventListener("click", function () {
+        let message = $("#message-input").val()
+
+
+        makeMess = (message, userId) => {
+            let mess = document.createElement("p")
+            mess.textContent = message
+            mess.className += `message ${userId}`
+            $("#message-box").append(mess)
+            let userIdNum = parseInt(userId);
+            ajax.postMessage(message, userIdNum)
+
+        }
+        $("#message-input").val("")
+        makeMess(message, currentUser());
+
+    })
 }
-makeMess(message);
-// pushMessage(message, userId)
-});
+
+module.exports = submitMess

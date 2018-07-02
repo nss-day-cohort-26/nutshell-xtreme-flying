@@ -5,7 +5,7 @@ class ajaxCalls {
         return $.ajax(`http://localhost:3000/${resource}`)
     }
 
-    postMessage(user, msg) {
+    postMessage(msg, user) {
         $.ajax({
             url: "http://localhost:3000/messages",
             method: "POST",
@@ -120,4 +120,8 @@ class ajaxCalls {
 
 
 }
+
+const ajax = new ajaxCalls;
+
+module.exports = ajax;
 

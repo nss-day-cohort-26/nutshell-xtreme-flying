@@ -1,20 +1,19 @@
 const $ = require("jquery")
+const ajax = require("./../ajaxCalls.js")
 
-const buildMessageSection = function () {
+const buildMessageArticle = function (messageList) {
 
-const $messageSection = document.createElement("article")
+const $messageArticle = document.createElement("article")
+$messageArticle.id = "message-article"
 
-$('<section>').attr('id', 'message-box').appendTo($messageSection);
-
-let mess = document.createElement("p")
-mess.textContent = "This is a test"
-$messageSection.appendChild(mess)
-
-$('<input>').attr('type','text').appendTo($messageSection);
-$("<button>").attr('type','button').text("Send Message").appendTo($messageSection)
+$('<section>').attr('id', 'message-box').appendTo($messageArticle);
 
 
-$("#friends").append($messageSection)
+$('<input>').attr('type','text').attr('id', 'message-input').appendTo($messageArticle);
+$("<button>").attr('type','button').attr('id', 'message-btn').text("Send Message").appendTo($messageArticle)
+
+
+$("#friends").append($messageArticle)
 }
 
-module.exports = buildMessageSection;
+module.exports = buildMessageArticle;

@@ -9,6 +9,12 @@
    width: 25%;
 }
 
-#message-box{
-
+.message{
+    border-radius: 25px;
+    background: #0B93F6;
+    padding:5px 10px;
+    max-width: 60%;
+    font-family: "Helvetica Neue";
+	/* font-size: 20px; */
+	font-weight: normal;
 } 

@@ -27,7 +27,7 @@ class ajaxCalls {
         })
     }
 
-    postEvents(user, name, loc, date) {
+    postEvent(user, name, loc, date) {
         $.ajax({
             url: "http://localhost:3000/events",
             method: "POST",
@@ -40,7 +40,7 @@ class ajaxCalls {
         })
     }
 
-    putEvents(user, msg, id) {
+    putEvent(user, name, loc, date, id) {
         $.ajax({
             url: `http://localhost:3000/events/${id}`,
             method: "PUT",
@@ -74,9 +74,50 @@ class ajaxCalls {
         })
     }
 
-    
+    postTask(user, task, done) {
+        $.ajax({
+            url: "http://localhost:3000/tasks",
+            method: "POST",
+            data: {
+                "userId": user,
+                "task": task,
+                "completed": done
+            }
+        })
+    }
+
+    putTask(user, task, done, id) {
+        $.ajax({
+            url: `http://localhost:3000/events/${id}`,
+            method: "PUT",
+            data: {
+                "userId": user,
+                "task": task,
+                "completed": done
+            }
+        })
+    }
+
+    postFriend(user, yourid) {
+        $.ajax({
+            url: "http://localhost:3000/friends",
+            method: "POST",
+            data: {
+                "userId": user,
+                "yourId": yourid
+            }
+        })
+    }
+
+    delFriend(id) {
+        $.ajax({
+            url: `http://localhost:3000/friends/${id}`,
+            method: "DELETE"
+        })
+    }
 
 
-    
+
+
 }
 

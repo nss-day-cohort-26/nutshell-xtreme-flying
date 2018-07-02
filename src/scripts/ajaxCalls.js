@@ -88,7 +88,7 @@ class ajaxCalls {
 
     putTask(user, task, done, id) {
         $.ajax({
-            url: `http://localhost:3000/events/${id}`,
+            url: `http://localhost:3000/tasks/${id}`,
             method: "PUT",
             data: {
                 "userId": user,
@@ -121,3 +121,6 @@ class ajaxCalls {
 
 }
 
+const ajax = new ajaxCalls;
+
+module.exports = ajax;

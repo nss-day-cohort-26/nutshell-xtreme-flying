@@ -1,6 +1,8 @@
 const $ = require('jquery');
+const AJ = require('../ajaxCalls.js');
 
-class buildTask{
+
+class buildTask {
     taskBones() {
         const taskDiv = $('#tasks');
         taskDiv.append(`
@@ -26,23 +28,36 @@ class buildTask{
     }
 
     taskPopulate() {
-        //ajax call//
-        const taskList = $('#task-list');
-        taskList.empty();
-        // Maybe add a countdown for each task?
-        tasks.forEach(task => {
-            taskList.append(`
-            <div id="${task.id}" class="task-card">
-                <h4 class="task-card-title"><b>${task.title}</b></h4> 
-                <span class="task-card-date">${task.date}</span>
-                <button id="task-complete-btn">Done</button>
-                <button id="task-edit-btn">Edit</button>
-            </div>
-            `)
-        })
+        AJ.getField('tasks')
+            .then(tasks => {
+                // console.log("taskPopulate", tasks);
+                const taskList = $('#task-list');
+                taskList.empty();
+                // Maybe add a countdown for each task?
+                tasks.forEach(thing => {
+                    // console.log('taskPopulate-thing', thing.id);
+                    if (!(thing.completed)){
+                    taskList.append(`
+                    <div id="${thing.id}" class="task-card">
+                        <h4 class="task-card-title"><b>${thing.task}</b></h4> 
+                        <button class="task-complete-btn" id="${thing.id}">Job Done</button>
+                        <button class="task-edit-btn" id="${thing.id}">Edit</button>
+                        <span class="task-card-date">${thing.date}</span>
+                        
+                    </div>
+                    `)
+                    }
+                })
+            })
+
     }
 
 }
 
+
+
 const bTask = new buildTask;
 bTask.taskBones();
+bTask.taskPopulate();
+
+module.exports = bTask;

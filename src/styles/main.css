@@ -1,3 +1,33 @@
 .features {
     border: 1px solid black;
 }
+
+/* Friend List */
+#friends {
+    width: 15%;
+    padding-left: 30px;
+}
+
+#friends h1 {
+    margin-bottom: 0px;
+}
+
+.friend-name {
+    display: inline-block;
+    padding: 4px;
+}
+
+li {
+    list-style-type: none;
+    padding: 3px;
+}
+
+.friend-icon {
+    height: 20px;
+    width: auto;
+    display: inline-block;
+}
+
+.delete {
+    display: inline-block;
+}

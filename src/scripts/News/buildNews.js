@@ -26,8 +26,12 @@ buildNews: {
                 ajax.getField("news")
                 .then(item => {
                     //*TODO LATER* Add conditions for user ID to get name of who posted
+                    item.sort(function(a,b){
+                        // Turn your strings into dates, and then subtract them
+                        // to get a value that is either negative, positive, or zero.
+                        return new Date(b.timestamp) - new Date(a.timestamp);
+                        });
                     item.forEach(key => {
-                        
                         const $holderSec = $("<section>").addClass("articles").attr("id", key.id);
                         const $title = $("<h3>").text(key.title).appendTo($holderSec);
                         const $url = $("<p>").text(`Source: ${key.url}`).appendTo($holderSec);
@@ -43,11 +47,7 @@ buildNews: {
                         $holderSec.appendTo("#articleSec");
 
                     })
-                    item.sort(function(a,b){
-                        // Turn your strings into dates, and then subtract them
-                        // to get a value that is either negative, positive, or zero.
-                        return new Date(b.date) - new Date(a.date);
-                        });
+                        console.log(item)
                 })
             }
             getArticles()

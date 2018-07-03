@@ -3,6 +3,7 @@
 const $ = require("jquery")
 const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
+const editMess = require("./editMessage")
 // const currentUser = require("./currentUser")
 let currentUse = 1;
 const buildMessageArticle = function () {
@@ -21,35 +22,37 @@ const buildMessageArticle = function () {
     $("#friends").append($messageArticle)
 
     subMess();
+    
 
 
     ajax.getField("messages").then(function (messageList) {
-        let users = ajax.getField("users").then(function (response) {
-            let users = response
-            return users
-        }
-        )
-
-        console.log(users)
 
         messageList.forEach(element => {
             let mess = document.createElement("p")
 
-            mess.textContent = `${element.message}`
-            if (element.userId == 1) {
-                mess.classList = `message ${element.userId}`
-            } else {
-                mess.classList = `friendMessage ${element.userId}`
-            }
-            $("#message-box").append(mess)
 
-        })
-    }
-    )
+            ajax.getUser(element.userId).then(function (response) {
+                mess.textContent = `${response.name}: ${element.message}`
+                if (element.userId == 1) {
+                    mess.classList = `message ${element.userId}`
+                    mess.id= `${response.name}--${response.id}` 
+                    $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess); 
+                } else {
+                    mess.classList = `friendMessage ${element.userId}`
+                    mess.id= `${response.name}--${response.id}`
+                }
+                // mess.append(editBtn) 
+ 
+                $("#message-box").append(mess)
+                editMess();
+            })
+        }
+        )
+    })
 }
 
 
 
 
 
-module.exports = buildMessageArticle;
+    module.exports = buildMessageArticle;

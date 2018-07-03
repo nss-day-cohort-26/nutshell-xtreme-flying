@@ -7,17 +7,20 @@
    display: flex;
    height: 25%;
    width: 25%;
-}
+} 
 
 #message-article {
     max-height: 500px;
     overflow-y:scroll;
-    position:"relative"
+    position:"relative";
+
 }
 
 #input-div{
     /* position: absolute; */
     position: relative;
+    height:30px;
+
     /* bottom: 20px;
     right: 20px; */
     /* background:#999;*/

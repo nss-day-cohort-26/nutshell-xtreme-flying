@@ -22,7 +22,7 @@ const submitMess = function () {
 
         }
         $("#message-input").val("")
-        makeMess(message); 
+        makeMess(message, 1); 
 
     })
 }

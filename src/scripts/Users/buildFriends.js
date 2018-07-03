@@ -1,4 +1,5 @@
 const $ = require("jquery")
+//Coded by Jenn
 const ajax = require("../ajaxCalls")
 
 const friendList = Object.create({}, {

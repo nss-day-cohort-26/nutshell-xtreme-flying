@@ -1,3 +1,4 @@
+// Coded by Jenn
 const $ = require("jquery")
 const ajax = require("../ajaxCalls")
 const friendList = require("./buildFriends")

@@ -54,7 +54,7 @@ class ajaxCalls {
     }
 
     postNews(user, title, url, syn, time) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/news",
             method: "POST",
             data: {
@@ -68,7 +68,7 @@ class ajaxCalls {
     }
 
     delNews(id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/news/${id}`,
             method: "DELETE"
         })
@@ -120,4 +120,5 @@ class ajaxCalls {
 
 
 }
-
+const ajax = new ajaxCalls
+module.exports = ajax;

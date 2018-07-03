@@ -1,6 +1,8 @@
+//William Kimball 2018
+
 const $ = require("jquery");
 const ajax = require("./../ajaxCalls.js")
-const currentUser = require("./currentUser")
+// const currentUser = require("./currentUser")
 
 
 
@@ -12,7 +14,7 @@ const submitMess = function () {
 
         makeMess = (message, userId) => {
             let mess = document.createElement("p")
-            mess.textContent = message
+            mess.textContent = `${message}`
             mess.className += `message ${userId}`
             $("#message-box").append(mess)
             let userIdNum = parseInt(userId);
@@ -20,7 +22,7 @@ const submitMess = function () {
 
         }
         $("#message-input").val("")
-        makeMess(message, currentUser());
+        makeMess(message); 
 
     })
 }

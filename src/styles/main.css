@@ -9,6 +9,21 @@
    width: 25%;
 }
 
+#message-article {
+    height: 250px;
+    overflow-y:scroll;
+    position:"relative"
+}
+
+#input-div{
+    /* position: absolute; */
+    /* position:fixed; */
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    /* background:#999;*/
+} 
 .message{
     border-radius: 25px;
     display: block;
@@ -18,7 +33,12 @@
     font-family: "Helvetica Neue";
     float: right;
 	/* font-size: 20px; */
-	font-weight: normal;
+    /* font-weight: normal;
+    flex: 1;
+    height:100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse; */
 } 
 
 .friendMessage{
@@ -30,5 +50,10 @@
     font-family: "Helvetica Neue";
     float: left;
 	/* font-size: 20px; */
-	font-weight: normal;
+    /* font-weight: normal;
+    flex: 1;
+    height:100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse; */
 }

@@ -11,8 +11,8 @@ const friendsMaster = Object.create({}, {
                 usersArray.forEach(userObject =>{
                     console.log(userObject.id)
                     if(userObject.name.toLowerCase() === nameInputField) {
-                        ajax.postFriend(userObject.id, 1).then(
-                            friendList.createFriendListComponent(1) //the number (second parameter) should be the current user ID
+                        ajax.postFriend(userObject.id, 3).then(
+                            friendList.createFriendListComponent(3) //the number (second parameter) should be the current user ID
                         )
                     }
                 })
@@ -23,7 +23,7 @@ const friendsMaster = Object.create({}, {
         value: function() {
             console.log(Number(event.target.id))
             ajax.delFriend(event.target.id).then((response)=>{
-                friendList.createFriendListComponent(1)
+                friendList.createFriendListComponent(3)
             })
         }
     }

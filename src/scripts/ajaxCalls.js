@@ -28,7 +28,7 @@ class ajaxCalls {
     }
 
     postEvent(user, name, loc, date) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/events",
             method: "POST",
             data: {
@@ -121,3 +121,6 @@ class ajaxCalls {
 
 }
 
+const ajax = new ajaxCalls;
+
+module.exports = ajax;

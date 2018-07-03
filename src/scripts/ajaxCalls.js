@@ -5,6 +5,10 @@ class ajaxCalls {
         return $.ajax(`http://localhost:3000/${resource}`)
     }
 
+    getUser(userId) {
+        return $.ajax(`http://localhost:3000/users/${userId}`)
+    }
+
     postMessage(msg, user) {
         $.ajax({
             url: "http://localhost:3000/messages",

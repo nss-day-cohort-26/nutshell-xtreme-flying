@@ -12,9 +12,6 @@ const buildMessageArticle = function () {
 
     $('<section>').attr('id', 'message-box').appendTo($messageArticle);
 
-    // $('<input>').attr('type', 'text').attr('id', 'user-input').appendTo($messageArticle);
-    // $("<button>").attr('type', 'button').attr('id', 'user-btn').text("Submit Current User").appendTo($messageArticle);
-    // console.log(currentUse)
 
     let $inputDiv = $("<div>").attr("id", "input-div")
     $('<input>').attr('type', 'text').attr('id', 'message-input').appendTo($inputDiv);

@@ -67,21 +67,45 @@
   "tasks": [
     {
       "userId": "1",
-      "task": "Boogie",
+      "task": "New task",
+      "date": "2018-07-03T19:30",
       "completed": "true",
       "id": 1
     },
     {
       "userId": "1",
-      "task": "Figure out the meaning of life",
+      "task": "Edit",
+      "date": "2018-07-07T19:30",
       "completed": "true",
       "id": 2
     },
     {
       "userId": "1",
-      "task": "Ponder existence",
+      "task": "edit",
+      "date": "2018-07-06T09:05",
       "completed": "true",
       "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "create",
+      "date": "2018-07-12T09:05",
+      "completed": "true",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "create second",
+      "date": "2018-07-12T09:58",
+      "completed": "false",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "create third",
+      "date": "2018-07-08T09:58",
+      "completed": "false",
+      "id": 6
     }
   ]
 }

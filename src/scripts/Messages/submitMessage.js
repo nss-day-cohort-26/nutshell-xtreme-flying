@@ -20,12 +20,12 @@ const submitMess = function () {
             
             ajax.getUser(userId).then(function (response) {
                 mess.id = `${response.name}--${response.id}`
-                console.log(mess)
+                // console.log(mess)
             })
             $("#message-box").append(mess)
             let userIdNum = parseInt(userId);
             ajax.postMessage(message, userIdNum).then(function (response) {
-                console.log(response.id) 
+                // console.log(response.id) 
                 editMess(response.id);
             })
 

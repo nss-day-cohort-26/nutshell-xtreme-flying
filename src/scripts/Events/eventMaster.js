@@ -15,52 +15,23 @@ class eventMaster {
     editEvent() {
 
         ajax.getField(`events/${event.target.id}`).then((eventInfo) => {
-            var editModal = (`
-            <div class="modal" id = "editModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Events</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="editEventForm">
-                                Event Name: <input id="editEventInput">
-                                    <br>
-                                        Location:
-                    <input id="editEventLocation">
-                                            <br>
-                                                <label for="event-time">Date and time:</label>
-                                                <input type="datetime-local" id="editEventParty-time" name="party-time" value="2018-07-10T19:30" min="2018-06-07T00:00" max="2020-06-14T00:00"
-                                                />
-          </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary" id="editEventButton">Save Edited Event</button>
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            </div>
-        </div>
-      </div>
-    </div>
-    `)
 
-
-    $("#editEventInput").val(eventInfo.name);
-    $("#editEventLocation").val(eventInfo.location);
-    $("#editEventParty-time").val(eventInfo.date);
-    $("#editEventModal").append(editModal);
-})
+            $("#editEventInput").val(eventInfo.name);
+            $("#editEventLocation").val(eventInfo.location);
+            $("#editEventParty-time").val(eventInfo.date);
+        })
     }
 
     saveEditedEvent() {
         let editedName = $("#editEventInput").val();
         let editedLocation = $("#editEventLocation").val();
         let editedDate = $("#editEventParty-time").val();
+        let uniqueId = event.target.attributes.uniqueid.value;
+        let user = event.target.attributes.userid.value;
+        ajax.putEvent(user, editedName, editedLocation, editedDate, uniqueId).then((response) => {
+            makeAnEvent.buildSingleEvent();
+        })
 
-        console.log(editedDate);
-        console.log(editedName);
-        console.log(editedLocation);
 
     }
 
@@ -68,6 +39,9 @@ class eventMaster {
 }
 
 const eventFunctions = new eventMaster;
+//save edit button
 $("#editEventModal").on("click", "#editEventButton", eventFunctions.saveEditedEvent)
+//save button
 $("#saveEventButton").on("click", eventFunctions.addNewEvent)
+//actual edit button
 $("#events").on("click", ".btn-edit", eventFunctions.editEvent)

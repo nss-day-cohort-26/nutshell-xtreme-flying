@@ -41,7 +41,7 @@ class buildEventSection {
                                             />
       </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" id="saveEventButton">Save Event</button>
+                                            <button type="button" class="btn btn-primary" id="saveEventButton" data-dismiss="modal">Save Event</button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         </div>
     </div>
@@ -63,11 +63,41 @@ buildSingleEvent() {
                     <div id="location">${eventObject.location}</div>
                     <div id="date">${eventObject.date}</div>
                     <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#editModal">Edit</button>
-                </section>
-            `))
+                </section>`))
+                let editModal = $(`
+                <div class="modal" id = "editModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Events</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="editEventForm">
+                                    Event Name: <input id="editEventInput">
+                                        <br>
+                                            Location:
+                        <input id="editEventLocation">
+                                                <br>
+                                                    <label for="event-time">Date and time:</label>
+                                                    <input type="datetime-local" id="editEventParty-time" name="party-time" value="2018-07-10T19:30" min="2018-06-07T00:00" max="2020-06-14T00:00"
+                                                    />
+              </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" uniqueId="${eventObject.id}" userId="${eventObject.userId}" id="editEventButton" data-dismiss="modal">Save Edited Event</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+            </div>
+          </div>
+        </div>
+        `)
+        console.log(editModal);
+
+        $("#editEventModal").append(editModal);
         });
     })
-
 }
 
 }

@@ -17,7 +17,7 @@ const friendList = Object.create({}, { // creates element to hold all of the fri
         }
     },
     "createFriendListComponent": { //creates a div for each friend. has a button for deleting friends. this button has the unique ID of the friend you want to delete.
-        value: function(yourId) {
+        value: function(yourId) { //yourId needs to be the user that is logged in
             ajax.getField(`friends?_expand=user&yourId=${yourId}`).then((friendsArray) => {
                 $("#friend-list").empty()
                 friendsArray.forEach(friend => {

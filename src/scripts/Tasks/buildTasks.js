@@ -79,11 +79,7 @@ class buildTask {
 
 
 const bTask = new buildTask;
-<<<<<<< HEAD
-// bTask.taskBones();
-=======
 bTask.taskBones();
 bTask.taskPopulate();
 
 module.exports = bTask;
->>>>>>> master

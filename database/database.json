@@ -9,6 +9,7 @@
       "id": 2,
       "name": "UMMM ISthename",
       "email": "magic_hamster@yahoo.com"
+<<<<<<< HEAD
     },
     {
       "id": 3,
@@ -19,10 +20,13 @@
       "id": 4,
       "name": "Leah Gwin",
       "email": "leahgwin@gmail.com"
+=======
+>>>>>>> master
     }
   ],
   "friends": [
     {
+<<<<<<< HEAD
       "id": 2,
       "userId": 1,
       "yourId": 3
@@ -63,6 +67,38 @@
       "id": 2,
       "userId": 1,
       "message": "Jack Bob, I really don't want to hear from you about anything ever."
+=======
+      "id": 1,
+      "userId": 2,
+      "yourId": 1
+    }
+  ],
+  "messages": [
+    {
+      "userId": "2",
+      "message": "Maybe this will actually work.",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "message": " Hello, this is my final version of some edited text.",
+      "id": 3
+    },
+    {
+      "userId": "2",
+      "message": "THis is another test of this",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "message": "  Hello, this is my final version of some edited text.",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "message": "  Another one for the books",
+      "id": 6
+>>>>>>> master
     }
   ],
   "news": [
@@ -101,6 +137,7 @@
   ],
   "tasks": [
     {
+<<<<<<< HEAD
       "id": 1,
       "userId": 2,
       "task": "Boogie",
@@ -117,6 +154,69 @@
       "userId": 1,
       "task": "Ponder existence",
       "completed": true
+=======
+      "userId": "1",
+      "task": "New task",
+      "date": "2018-07-03T19:30",
+      "completed": "true",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "task": "Edit",
+      "date": "2018-07-07T19:30",
+      "completed": "true",
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "task": "edit",
+      "date": "2018-07-06T09:05",
+      "completed": "true",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "create",
+      "date": "2018-07-12T09:05",
+      "completed": "true",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "create second",
+      "date": "2018-07-12T09:58",
+      "completed": "true",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "Finish that good good merge",
+      "date": "2018-07-12T11:07",
+      "completed": "true",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "task": "dfasdasdfasdf",
+      "date": "2018-07-12T11:10",
+      "completed": "false",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "task": "asdfasdf",
+      "date": "2018-07-12T11:13",
+      "completed": "false",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "task": "New taskl",
+      "date": "2018-07-12T11:56",
+      "completed": "false",
+      "id": 10
+>>>>>>> master
     }
   ]
 }

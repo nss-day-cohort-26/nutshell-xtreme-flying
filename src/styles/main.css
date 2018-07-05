@@ -35,3 +35,78 @@ li {
 .delete {
     display: inline-block;
 }
+
+/* Messages Styles */
+#messages {
+   margin: 1%;
+   display: flex;
+   height: 25%;
+   width: 25%;
+}
+
+#message-article {
+    max-height: 500px;
+    overflow-y:scroll;
+    position:"relative";
+
+}
+
+#input-div{
+    /* position: absolute; */
+    position: relative;
+    height:30px;
+
+    /* bottom: 20px;
+    right: 20px; */
+    /* background:#999;*/
+}
+.message{
+    border-radius: 25px;
+    display: block;
+    background: #0B93F6;
+    padding:5px 10px;
+    max-width: 60%;
+    font-family: "Helvetica Neue";
+    float: right;
+	/* font-size: 20px; */
+    /* font-weight: normal;
+    flex: 1;
+    height:100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse; */
+}
+
+textarea {
+    background: #0B93F6;
+    border-radius: 25px;
+}
+
+.friendMessage{
+    border-radius: 25px;
+    display: block;
+    background: #E5E5EA;
+    padding:5px 10px;
+    max-width: 60%;
+    font-family: "Helvetica Neue";
+    float: left;
+	/* font-size: 20px; */
+    /* font-weight: normal;
+    flex: 1;
+    height:100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse; */
+}
+
+/* Task CSS */
+.task-main-edit {
+    position: fixed;
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 1%;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+
+}

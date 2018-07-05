@@ -9,7 +9,6 @@
       "id": 2,
       "name": "UMMM ISthename",
       "email": "magic_hamster@yahoo.com"
-<<<<<<< HEAD
     },
     {
       "id": 3,
@@ -20,13 +19,10 @@
       "id": 4,
       "name": "Leah Gwin",
       "email": "leahgwin@gmail.com"
-=======
->>>>>>> master
     }
   ],
   "friends": [
     {
-<<<<<<< HEAD
       "id": 2,
       "userId": 1,
       "yourId": 3
@@ -59,22 +55,6 @@
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 2,
-      "message": "These are the important things that I had to say to you, UMMM."
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "message": "Jack Bob, I really don't want to hear from you about anything ever."
-=======
-      "id": 1,
-      "userId": 2,
-      "yourId": 1
-    }
-  ],
-  "messages": [
-    {
       "userId": "2",
       "message": "Maybe this will actually work.",
       "id": 1
@@ -98,7 +78,6 @@
       "userId": "1",
       "message": "  Another one for the books",
       "id": 6
->>>>>>> master
     }
   ],
   "news": [
@@ -137,24 +116,6 @@
   ],
   "tasks": [
     {
-<<<<<<< HEAD
-      "id": 1,
-      "userId": 2,
-      "task": "Boogie",
-      "completed": true
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "task": "Figure out the meaning of life",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "task": "Ponder existence",
-      "completed": true
-=======
       "userId": "1",
       "task": "New task",
       "date": "2018-07-03T19:30",
@@ -216,7 +177,6 @@
       "date": "2018-07-12T11:56",
       "completed": "false",
       "id": 10
->>>>>>> master
     }
   ]
 }

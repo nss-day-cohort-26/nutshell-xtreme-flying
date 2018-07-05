@@ -37,6 +37,6 @@ const friendList = Object.create({}, { // creates element to hold all of the fri
 module.exports = friendList
 
 friendList.createFriendsTemplate()
-friendList.createFriendListComponent(3) // hard coded "yourId", will need to be changed with login feature
+friendList.createFriendListComponent(1) // hard coded "yourId", will need to be changed with login feature
 
 

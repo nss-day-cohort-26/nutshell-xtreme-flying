@@ -9,24 +9,59 @@
       "id": 2,
       "name": "UMMM ISthename",
       "email": "magic_hamster@yahoo.com"
+    },
+    {
+      "id": 3,
+      "name": "Jenn",
+      "email": "jenniferlawson000@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Leah Gwin",
+      "email": "leahgwin@gmail.com"
     }
   ],
   "friends": [
     {
-      "id": 1,
+      "id": 2,
+      "userId": 1,
+      "yourId": 3
+    },
+    {
+      "id": 3,
       "userId": 2,
-      "yourId": 1
+      "yourId": 3
+    },
+    {
+      "userId": "1",
+      "yourId": "1",
+      "id": 11
+    },
+    {
+      "userId": "3",
+      "yourId": "1",
+      "id": 13
+    },
+    {
+      "userId": "4",
+      "yourId": "1",
+      "id": 14
+    },
+    {
+      "userId": "4",
+      "yourId": "3",
+      "id": 15
     }
   ],
   "messages": [
     {
-      "id": 1,
       "userId": "2",
-      "message": "These are the important things that I had to say to you, UMMM."
+      "message": "Maybe this will actually work.",
+      "id": 1
     },
     {
       "userId": "1",
-      "message": "Hello, this is my final version of some edited text.",
+      "message": " Hello, this is my final version of some edited text.",
       "id": 3
     },
     {
@@ -36,12 +71,12 @@
     },
     {
       "userId": "1",
-      "message": "Once agin",
+      "message": "  Hello, this is my final version of some edited text.",
       "id": 5
     },
     {
       "userId": "1",
-      "message": "Another one for the books",
+      "message": "  Another one for the books",
       "id": 6
     },
     {
@@ -60,7 +95,7 @@
       "timestamp": "13:12 3/12/16"
     },
     {
-      "id": 1,
+      "id": 2,
       "userId": 1,
       "url": "babble.com/newsworthystuff",
       "title": "I'm Perd Hadley",
@@ -86,22 +121,74 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 2,
-      "task": "Boogie",
-      "completed": true
+      "userId": "1",
+      "task": "New task",
+      "date": "2018-07-03T19:30",
+      "completed": "true",
+      "id": 1
     },
     {
-      "id": 1,
-      "userId": 1,
-      "task": "Figure out the meaning of life",
-      "completed": false
+      "userId": "1",
+      "task": "Edit",
+      "date": "2018-07-07T19:30",
+      "completed": "true",
+      "id": 2
     },
     {
-      "id": 1,
-      "userId": 1,
-      "task": "Ponder existence",
-      "completed": true
+      "userId": "1",
+      "task": "edit",
+      "date": "2018-07-06T09:05",
+      "completed": "true",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "create",
+      "date": "2018-07-12T09:05",
+      "completed": "true",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "create second",
+      "date": "2018-07-12T09:58",
+      "completed": "true",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "Finish that good good merge",
+      "date": "2018-07-12T11:07",
+      "completed": "true",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "task": "dfasdasdfasdf",
+      "date": "2018-07-12T11:10",
+      "completed": "false",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "task": "asdfasdf",
+      "date": "2018-07-12T11:13",
+      "completed": "false",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "task": "New taskl",
+      "date": "2018-07-12T11:56",
+      "completed": "true",
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "task": "Today I need to eat dinner",
+      "date": "2018-07-12T01:23",
+      "completed": "false",
+      "id": 11
     }
   ]
 }

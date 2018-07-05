@@ -2,12 +2,47 @@
     border: 1px solid black;
 }
 
+/* Friend List Coded by Jenn*/
 #friends {
-   margin: 1%; 
+    width: 25%;
+    padding-left: 30px;
+}
+
+#friends h1 {
+    margin-bottom: 0px;
+}
+
+.friend-name {
+    display: inline-block;
+    padding: 4px;
+}
+
+.find-new-friend {
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
+    padding: 3px;
+}
+
+.friend-icon {
+    height: 20px;
+    width: auto;
+    display: inline-block;
+}
+
+.delete {
+    display: inline-block;
+}
+
+/* Messages Styles */
+#messages {
+   margin: 1%;
    display: flex;
    height: 25%;
    width: 25%;
-} 
+}
 
 #message-article {
     max-height: 500px;
@@ -24,7 +59,7 @@
     /* bottom: 20px;
     right: 20px; */
     /* background:#999;*/
-} 
+}
 .message{
     border-radius: 25px;
     display: block;
@@ -40,11 +75,11 @@
     overflow: auto;
     display: flex;
     flex-direction: column-reverse; */
-} 
+}
 
 textarea {
     background: #0B93F6;
-    border-radius: 25px; 
+    border-radius: 25px;
 }
 
 .friendMessage{
@@ -62,4 +97,16 @@ textarea {
     overflow: auto;
     display: flex;
     flex-direction: column-reverse; */
+}
+
+/* Task CSS */
+.task-main-edit {
+    position: fixed;
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 1%;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+
 }

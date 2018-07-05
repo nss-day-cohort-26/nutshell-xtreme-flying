@@ -82,32 +82,34 @@ class ajaxCalls {
         })
     }
 
-    postTask(user, task, done) {
-        $.ajax({
+    postTask(user, task, done, date) {
+        return $.ajax({
             url: "http://localhost:3000/tasks",
             method: "POST",
             data: {
                 "userId": user,
                 "task": task,
+                "date": date,
                 "completed": done
             }
         })
     }
 
-    putTask(user, task, done, id) {
-        $.ajax({
-            url: `http://localhost:3000/events/${id}`,
+    putTask(user, task, done, date, id) {
+        return $.ajax({
+            url: `http://localhost:3000/tasks/${id}`,
             method: "PUT",
             data: {
                 "userId": user,
                 "task": task,
+                "date": date,
                 "completed": done
             }
         })
     }
 
     postFriend(user, yourid) {
-        $.ajax({
+       return $.ajax({
             url: "http://localhost:3000/friends",
             method: "POST",
             data: {
@@ -118,18 +120,13 @@ class ajaxCalls {
     }
 
     delFriend(id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/friends/${id}`,
             method: "DELETE"
         })
     }
-
-
-
-
 }
 
 const ajax = new ajaxCalls;
 
 module.exports = ajax;
-

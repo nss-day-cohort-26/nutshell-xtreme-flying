@@ -48,14 +48,14 @@
       "id": 15
     },
     {
-      "userId": "3",
-      "yourId": "1",
-      "id": 16
-    },
-    {
       "userId": "2",
       "yourId": "1",
       "id": 17
+    },
+    {
+      "userId": "3",
+      "yourId": "1",
+      "id": 18
     }
   ],
   "messages": [
@@ -93,6 +93,11 @@
       "userId": "2",
       "message": "hey friends!!!!",
       "id": 8
+    },
+    {
+      "userId": "2",
+      "message": "newer message",
+      "id": 9
     }
   ],
   "news": [
@@ -116,7 +121,7 @@
   "events": [
     {
       "userId": "1",
-      "name": "Merge the Master",
+      "name": "yes it does",
       "location": "Nash Software School",
       "date": "2018-07-20T07:30",
       "id": 3
@@ -148,6 +153,13 @@
       "location": "aarons house",
       "date": "2019-07-15T19:30",
       "id": 7
+    },
+    {
+      "userId": "1",
+      "name": "testin",
+      "location": "jaeogn",
+      "date": "2018-07-10T19:30",
+      "id": 8
     }
   ],
   "tasks": [
@@ -234,6 +246,13 @@
       "date": "2018-07-15T02:39",
       "completed": "false",
       "id": 13
+    },
+    {
+      "userId": "1",
+      "task": "testing",
+      "date": "2018-07-10T10:00",
+      "completed": "true",
+      "id": 14
     }
   ]
 }

@@ -1,11 +1,9 @@
 const $ = require("jquery"); 
 
-const scrollBottom = function () {
-    $(window).scroll(function (event) {
-        var scroll = $(window).scrollTop();
-        console.log(event) 
-    });
+const scrollBottom = function () { 
+    $("#message-article").scrollTop = $("#message-article").scrollHeight;  
+} 
+    
 
-}
-
-module.exports = scrollBottom;
+scrollBottom();
+module.exports = scrollBottom; 

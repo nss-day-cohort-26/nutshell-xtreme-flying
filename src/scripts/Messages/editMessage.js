@@ -1,6 +1,7 @@
 //William Kimball 2018
 const $ = require("jquery");
-const ajax = require("./../ajaxCalls.js");
+const ajax = require("./../ajaxCalls.js"); 
+const scrollBottom = require("./scrollBottom") 
 // console.log(buildMessages) 
 
 const editMess = function (mess) {
@@ -30,12 +31,8 @@ const editMess = function (mess) {
                         function () {
                             const buildMessages = require("./buildMessages");   
                             // console.log("yo")
-<<<<<<< HEAD
                             buildMessages();
                             scrollBottom();   
-=======
-                            buildMessages();   
->>>>>>> master
                         }
                     )   
                 }

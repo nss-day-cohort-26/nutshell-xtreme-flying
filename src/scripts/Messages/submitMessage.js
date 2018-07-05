@@ -3,6 +3,7 @@
 const $ = require("jquery");
 const ajax = require("./../ajaxCalls.js")
 const editMess = require("./editMessage")
+const scrollBottom = require("./scrollBottom")  
 // const currentUser = require("./currentUser")
 
 
@@ -34,13 +35,8 @@ const submitMess = function () {
 
         }
         $("#message-input").val("")
-<<<<<<< HEAD
         makeMess(message, 1); //change to work with current user
         scrollBottom();
-=======
-        makeMess(message, 2); //change to work with current user
- 
->>>>>>> master
     })
 }
 

@@ -5,7 +5,7 @@ const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
 // const currentUser = require("./currentUser")
-let currentUse = 1;//dont let this stay 
+let currentUse = 2;//dont let this stay 
 
 
 //This function creates an article where all of the message functionality goes, such as the messages, and the new message input field. It then executes an ajax call to the list of messages and runs the functions to build each message with a functional edit button.
@@ -21,7 +21,7 @@ const buildMessageArticle = function () {
     $("<button>").attr('type', 'button').attr('id', 'message-btn').text("Send Message").appendTo($inputDiv);
     $inputDiv.appendTo($messageArticle)
 
-    $("#friends").append($messageArticle)
+    $("#messages").append($messageArticle) 
 
     //this calls the function that adds the event listener to the submit button
     subMess();

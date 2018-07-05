@@ -4,8 +4,10 @@ const $ = require("jquery")
 const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
+const scrollBottom = require("./scrollBottom") 
 // const currentUser = require("./currentUser")
 let currentUse = 1;//dont let this stay 
+
 
 const buildMessageArticle = function () {
 
@@ -46,6 +48,7 @@ const buildMessageArticle = function () {
                 mess.id = `${element.id}`
 
                 $("#message-box").append(mess)
+                scrollBottom();
 
             })
         }

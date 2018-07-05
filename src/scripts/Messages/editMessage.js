@@ -27,7 +27,8 @@ const editMess = function (mess, userName) {
                         function () {
                             const buildMessages = require("./buildMessages");   
                             console.log("yo")
-                            buildMessages();   
+                            buildMessages();
+                            scrollBottom();   
                         }
                     )   
                 }

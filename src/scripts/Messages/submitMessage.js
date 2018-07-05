@@ -32,7 +32,7 @@ const submitMess = function () {
         }
         $("#message-input").val("")
         makeMess(message, 1); //change to work with current user
-
+        scrollBottom();
     })
 }
 

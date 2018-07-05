@@ -33,7 +33,7 @@ class buildTask{
         tasks.forEach(task => {
             taskList.append(`
             <div id="${task.id}" class="task-card">
-                <h4 class="task-card-title"><b>${task.title}</b></h4> 
+                <h4 class="task-card-title"><b>${task.title}</b></h4>
                 <span class="task-card-date">${task.date}</span>
                 <button id="task-complete-btn">Done</button>
                 <button id="task-edit-btn">Edit</button>

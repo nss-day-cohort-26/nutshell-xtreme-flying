@@ -9,8 +9,12 @@ class ajaxCalls {
         return $.ajax(`http://localhost:3000/users/${userId}`)
     }
 
+    getMessage(messageId) {
+        return $.ajax(`http://localhost:3000/messages/${messageId}`)
+    }
+
     postMessage(msg, user) {
-        $.ajax({
+       return $.ajax({
             url: "http://localhost:3000/messages",
             method: "POST",
             data: {
@@ -21,7 +25,7 @@ class ajaxCalls {
     }
 
     putMessage(user, msg, id) {
-        $.ajax({
+       return $.ajax({
             url: `http://localhost:3000/messages/${id}`,
             method: "PUT",
             data: {

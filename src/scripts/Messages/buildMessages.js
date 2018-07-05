@@ -5,7 +5,8 @@ const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
 // const currentUser = require("./currentUser")
-let currentUse = 1;
+let currentUse = 1;//dont let this stay 
+
 const buildMessageArticle = function () {
 
     const $messageArticle = document.createElement("article")
@@ -22,7 +23,6 @@ const buildMessageArticle = function () {
     $("#friends").append($messageArticle)
 
     subMess();
-    
 
 
     ajax.getField("messages").then(function (messageList) {
@@ -33,18 +33,20 @@ const buildMessageArticle = function () {
 
             ajax.getUser(element.userId).then(function (response) {
                 mess.textContent = `${response.name}: ${element.message}`
-                if (element.userId == 1) {
-                    mess.classList = `message ${element.userId}`
-                    mess.id= `${response.name}--${response.id}` 
-                    $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess); 
+                let userName = response.name 
+                if (element.userId == currentUse) {
+                    mess.classList = `message ${element.id}`
+                    // mess.id = `${response.id}`
+                    $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess);
+                    editMess(mess, userName);
                 } else {
                     mess.classList = `friendMessage ${element.userId}`
-                    mess.id= `${response.name}--${response.id}`
+                    // mess.id = `${response.id}`
                 }
-                // mess.append(editBtn) 
- 
+                mess.id = `${element.id}`
+
                 $("#message-box").append(mess)
-                editMess();
+
             })
         }
         )
@@ -55,4 +57,4 @@ const buildMessageArticle = function () {
 
 
 
-    module.exports = buildMessageArticle;
+module.exports = buildMessageArticle;

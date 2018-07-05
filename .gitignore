@@ -1,3 +1,8 @@
 node_modules
 .DS_Store
+<<<<<<< HEAD
 dist
+database.json
+=======
+dist
+>>>>>>> master

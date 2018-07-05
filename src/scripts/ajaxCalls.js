@@ -5,8 +5,16 @@ class ajaxCalls {
         return $.ajax(`http://localhost:3000/${resource}`)
     }
 
-    postMessage(user, msg) {
-        $.ajax({
+    getUser(userId) {
+        return $.ajax(`http://localhost:3000/users/${userId}`)
+    }
+
+    getMessage(messageId) {
+        return $.ajax(`http://localhost:3000/messages/${messageId}`)
+    }
+
+    postMessage(msg, user) {
+       return $.ajax({
             url: "http://localhost:3000/messages",
             method: "POST",
             data: {
@@ -17,7 +25,7 @@ class ajaxCalls {
     }
 
     putMessage(user, msg, id) {
-        $.ajax({
+       return $.ajax({
             url: `http://localhost:3000/messages/${id}`,
             method: "PUT",
             data: {
@@ -126,3 +134,4 @@ class ajaxCalls {
 const ajax = new ajaxCalls;
 
 module.exports = ajax;
+

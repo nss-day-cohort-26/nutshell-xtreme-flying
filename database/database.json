@@ -20,14 +20,29 @@
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 2,
-      "message": "These are the important things that I had to say to you, UMMM."
+      "userId": "2",
+      "message": "Maybe this will actually work.",
+      "id": 1
     },
     {
-      "id": 2,
-      "userId": 1,
-      "message": "Jack Bob, I really don't want to hear from you about anything ever."
+      "userId": "1",
+      "message": " Hello, this is my final version of some edited text.",
+      "id": 3
+    },
+    {
+      "userId": "2",
+      "message": "THis is another test of this",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "message": "  Hello, this is my final version of some edited text.",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "message": "  Another one for the books",
+      "id": 6
     }
   ],
   "news": [
@@ -97,15 +112,36 @@
       "userId": "1",
       "task": "create second",
       "date": "2018-07-12T09:58",
-      "completed": "false",
+      "completed": "true",
       "id": 5
     },
     {
       "userId": "1",
-      "task": "create third",
-      "date": "2018-07-08T09:58",
+      "task": "Finish that good good merge",
+      "date": "2018-07-12T11:07",
+      "completed": "true",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "task": "dfasdasdfasdf",
+      "date": "2018-07-12T11:10",
       "completed": "false",
-      "id": 6
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "task": "asdfasdf",
+      "date": "2018-07-12T11:13",
+      "completed": "false",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "task": "New taskl",
+      "date": "2018-07-12T11:56",
+      "completed": "false",
+      "id": 10
     }
   ]
 }

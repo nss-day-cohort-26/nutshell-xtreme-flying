@@ -13,7 +13,7 @@ const editMess = function (mess, userName) {
         text = /:(.+)/.exec(text)[1];   
         
         $(`#${mess.id}`).text("") 
-        console.log($(`#${mess.id}`)) 
+        // console.log($(`#${mess.id}`)) 
         $("<textArea>").attr('class', 'edit-submit-textArea').text(text).appendTo(mess)  
         $("<button>").attr('type', 'button').attr('class', 'edit-submit-btn').text("Save Edit").appendTo(mess);
         $(".edit-submit-btn").click(function() {
@@ -26,7 +26,7 @@ const editMess = function (mess, userName) {
                     ajax.putMessage(response.userId, newMessage, mess.id).then(
                         function () {
                             const buildMessages = require("./buildMessages");   
-                            console.log("yo")
+                            // console.log("yo")
                             buildMessages();
                             scrollBottom();   
                         }

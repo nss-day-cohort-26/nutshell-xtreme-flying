@@ -1,6 +1,7 @@
 const $ = require('jquery');
 const AJ = require('../ajaxCalls.js');
 const taskAll = require('../Tasks/taskMaster.js');
+const buildMessages = require("../Messages/buildMessages.js")
 
 
 class buildLogin {
@@ -105,6 +106,7 @@ class buildLogin {
             sessionStorage.setItem("User", 0);
         })
         taskAll();
+        buildMessages(AJ.getField("messages"));
     }
 
 

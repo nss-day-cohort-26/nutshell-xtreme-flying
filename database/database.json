@@ -108,6 +108,11 @@
       "userId": "2",
       "message": "newer message",
       "id": 9
+    },
+    {
+      "userId": "2",
+      "message": "test bottom up",
+      "id": 10
     }
   ],
   "news": [
@@ -187,6 +192,5 @@
       "completed": "false",
       "id": 2
     }
-    
   ]
 }

@@ -19,7 +19,7 @@ class buildEventSection {
         `);
 
         //building the bootstrap modal and form input fields... a lot of this is bootstrap, so dont let it stress you out lol
-        var modal = (`
+        let modal = (`
         <div class="modal" id = "myModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -60,11 +60,11 @@ buildSingleEvent() {
         eventsArray.forEach(eventObject => {
             //appends to the event holder
             $("#events-holder").append($(`
-                <section id = "${eventObject.userId}">
+                <section class = "${eventObject.userId}" id = "${eventObject.id}">
                     <div id="name">${eventObject.name}</div>
                     <div id="location">${eventObject.location}</div>
                     <div id="date">${eventObject.date}</div>
-                    <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#editModal">Edit</button>
+                    <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#modal${eventObject.id}">Edit</button>
                 </section>`))
                 //this is the editing modal that opens when the edit button is clicked... this loads on page load
                 let editModal = $(`
@@ -79,13 +79,13 @@ buildSingleEvent() {
                             </div>
                             <div class="modal-body">
                                 <form id="editEventForm">
-                                    Event Name: <input id="editEventInput">
+                                    Event Name: <input id="editEventInput${eventObject.id}">
                                         <br>
                                             Location:
-                        <input id="editEventLocation">
+                        <input id="editEventLocation${eventObject.id}">
                                                 <br>
                                                     <label for="event-time">Date and time:</label>
-                                                    <input type="datetime-local" id="editEventParty-time" name="party-time" value="2018-07-10T19:30" min="2018-06-07T00:00" max="2020-06-14T00:00"
+                                                    <input type="datetime-local" id="editEventParty-time${eventObject.id}" name="party-time" value="2018-07-10T19:30" min="2018-06-07T00:00" max="2020-06-14T00:00"
                                                     />
               </div>
                                                 <div class="modal-footer">
@@ -96,7 +96,7 @@ buildSingleEvent() {
           </div>
         </div>
         `)
-        // console.log(editModal);
+        console.log("Test", editModal);
 
         $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
         });

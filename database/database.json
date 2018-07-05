@@ -9,25 +9,90 @@
       "id": 2,
       "name": "UMMM ISthename",
       "email": "magic_hamster@yahoo.com"
+    },
+    {
+      "id": 3,
+      "name": "Jenn",
+      "email": "jenniferlawson000@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Leah Gwin",
+      "email": "leahgwin@gmail.com"
     }
   ],
   "friends": [
     {
-      "id": 1,
+      "id": 2,
+      "userId": 1,
+      "yourId": 3
+    },
+    {
+      "id": 3,
       "userId": 2,
-      "yourId": 1
+      "yourId": 3
+    },
+    {
+      "userId": "1",
+      "yourId": "1",
+      "id": 11
+    },
+    {
+      "userId": "4",
+      "yourId": "1",
+      "id": 14
+    },
+    {
+      "userId": "4",
+      "yourId": "3",
+      "id": 15
+    },
+    {
+      "userId": "3",
+      "yourId": "1",
+      "id": 16
+    },
+    {
+      "userId": "2",
+      "yourId": "1",
+      "id": 17
     }
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 2,
-      "message": "These are the important things that I had to say to you, UMMM."
+      "userId": "2",
+      "message": " Maybe this will actually work. it is working",
+      "id": 1
     },
     {
-      "id": 1,
-      "userId": 1,
-      "message": "Jack Bob, I really don't want to hear from you about anything ever."
+      "userId": "1",
+      "message": " Hello, this is my final version of some edited text.",
+      "id": 3
+    },
+    {
+      "userId": "2",
+      "message": "THis is another test of this",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "message": "  Hello, this is my final version of some edited text.",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "message": "  Another one for the books",
+      "id": 6
+    },
+    {
+      "userId": "2",
+      "message": "You have a hairy Butt",
+      "id": 7
+    },
+    {
+      "userId": "2",
+      "message": "hey friends!!!!",
+      "id": 8
     }
   ],
   "news": [
@@ -40,7 +105,7 @@
       "timestamp": "13:12 3/12/16"
     },
     {
-      "id": 1,
+      "id": 2,
       "userId": 1,
       "url": "babble.com/newsworthystuff",
       "title": "I'm Perd Hadley",
@@ -50,52 +115,125 @@
   ],
   "events": [
     {
-      "userId": "2",
-      "name": "take nap",
-      "location": "my bed",
-      "date": "2018-07-15T19:30",
+      "userId": "1",
+      "name": "Merge the Master",
+      "location": "Nash Software School",
+      "date": "2018-07-20T07:30",
       "id": 3
     },
     {
-      "userId": "2",
-      "name": "now it works",
-      "location": " helllooo",
-      "date": "2018-07-15T19:30",
+      "userId": "1",
+      "name": "Hairy Butt Club",
+      "location": "Your Mom's House",
+      "date": "2018-07-10T19:30",
       "id": 4
     },
     {
-      "userId": "2",
-      "name": "now editing",
-      "location": "work pls",
-      "date": "2018-07-10T19:30",
+      "userId": "1",
+      "name": "nss PROM",
+      "location": "jisie's house",
+      "date": "2018-07-18T16:00",
       "id": 5
     },
     {
-      "userId": "2",
-      "name": "Dancing Swing",
-      "location": "new park",
-      "date": "2018-07-10T19:30",
+      "userId": "1",
+      "name": "nss hot dog eating contest",
+      "location": "parking lot picnic tables",
+      "date": "2018-07-28T07:30",
       "id": 6
+    },
+    {
+      "userId": "1",
+      "name": "go kayaking",
+      "location": "aarons house",
+      "date": "2019-07-15T19:30",
+      "id": 7
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 2,
-      "task": "Boogie",
-      "completed": true
+      "userId": "1",
+      "task": "New task",
+      "date": "2018-07-03T19:30",
+      "completed": "true",
+      "id": 1
     },
     {
-      "id": 1,
-      "userId": 1,
-      "task": "Figure out the meaning of life",
-      "completed": false
+      "userId": "1",
+      "task": "Edit",
+      "date": "2018-07-07T19:30",
+      "completed": "true",
+      "id": 2
     },
     {
-      "id": 1,
-      "userId": 1,
-      "task": "Ponder existence",
-      "completed": true
+      "userId": "1",
+      "task": "edit",
+      "date": "2018-07-06T09:05",
+      "completed": "true",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "create",
+      "date": "2018-07-12T09:05",
+      "completed": "true",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "create second",
+      "date": "2018-07-12T09:58",
+      "completed": "true",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "Finish that good good merge",
+      "date": "2018-07-12T11:07",
+      "completed": "true",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "task": "dfasdasdfasdf",
+      "date": "2018-07-12T11:10",
+      "completed": "true",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "task": "asdfasdf",
+      "date": "2018-07-12T11:13",
+      "completed": "false",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "task": "New taskl",
+      "date": "2018-07-12T11:56",
+      "completed": "true",
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "task": "Today I need to eat dinner",
+      "date": "2018-07-12T01:23",
+      "completed": "false",
+      "id": 11
+    },
+    {
+      "userId": "1",
+      "task": "Shave Butt Hair",
+      "date": "2018-07-12T02:11",
+      "completed": "true",
+      "id": 12
+    },
+    {
+      "userId": "1",
+      "task": "eat all the hot dogs",
+      "date": "2018-07-15T02:39",
+      "completed": "false",
+      "id": 13
     }
   ]
 }

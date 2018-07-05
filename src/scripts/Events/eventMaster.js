@@ -14,17 +14,22 @@ class eventMaster {
     }
 
     editEvent() {
+console.log(event.target.id);
+
         ajax.getField(`events/${event.target.id}`).then((eventInfo) => {
-            $("#editEventInput").val(eventInfo.name);
-            $("#editEventLocation").val(eventInfo.location);
-            $("#editEventParty-time").val(eventInfo.date);
+            console.log("INFO", eventInfo.name);
+            $(`#editEventInput${eventInfo.id}`).val(eventInfo.name);
+            $(`#editEventLocation${eventInfo.id}`).val(eventInfo.location);
+            $(`#editEventParty-time${eventInfo.id}`).val(eventInfo.date);
         })
     }
 
     saveEditedEvent() {
-        let editedName = $("#editEventInput").val();
-        let editedLocation = $("#editEventLocation").val();
-        let editedDate = $("#editEventParty-time").val();
+        console.log("VALUE", event.target.attributes.uniqueid.value);
+
+        let editedName = $(`#editEventInput${event.target.attributes.uniqueId.value}`).val();
+        let editedLocation = $(`#editEventLocation${event.target.attributes.uniqueId.value}`).val();
+        let editedDate = $(`#editEventParty-time${event.target.attributes.uniqueId.value}`).val();
         let uniqueId = event.target.attributes.uniqueid.value;
         let user = event.target.attributes.userid.value;
         ajax.putEvent(user, editedName, editedLocation, editedDate, uniqueId).then((response) => {

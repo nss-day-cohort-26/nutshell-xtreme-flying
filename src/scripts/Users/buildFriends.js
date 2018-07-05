@@ -2,7 +2,7 @@ const $ = require("jquery")
 //Coded by Jenn
 const ajax = require("../ajaxCalls")
 
-const friendList = Object.create({}, {
+const friendList = Object.create({}, { // creates element to hold all of the friends and input to find friends and add them
     "createFriendsTemplate" : {
         value: function() {
             $("#friends").append($(`
@@ -16,7 +16,7 @@ const friendList = Object.create({}, {
             <section id='friend-list'></section>`))
         }
     },
-    "createFriendListComponent": {
+    "createFriendListComponent": { //creates a div for each friend. has a button for deleting friends. this button has the unique ID of the friend you want to delete.
         value: function(yourId) {
             ajax.getField(`friends?_expand=user&yourId=${yourId}`).then((friendsArray) => {
                 $("#friend-list").empty()

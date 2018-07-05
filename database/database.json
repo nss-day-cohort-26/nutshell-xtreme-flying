@@ -78,6 +78,11 @@
       "userId": "1",
       "message": "  Another one for the books",
       "id": 6
+    },
+    {
+      "userId": "2",
+      "message": " YOU Dont STINK",
+      "id": 7
     }
   ],
   "news": [
@@ -175,8 +180,15 @@
       "userId": "1",
       "task": "New taskl",
       "date": "2018-07-12T11:56",
-      "completed": "false",
+      "completed": "true",
       "id": 10
+    },
+    {
+      "userId": "1",
+      "task": "Today I need to eat dinner",
+      "date": "2018-07-12T01:23",
+      "completed": "false",
+      "id": 11
     }
   ]
 }

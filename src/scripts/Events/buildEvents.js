@@ -68,7 +68,7 @@ buildSingleEvent() {
                 </section>`))
                 //this is the editing modal that opens when the edit button is clicked... this loads on page load
                 let editModal = $(`
-                <div class="modal" id = "editModal" tabindex="-1" role="dialog">
+                <div class="modal" id = "modal${eventObject.id}" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">

@@ -36,7 +36,7 @@ class ajaxCalls {
     }
 
     postEvent(user, name, loc, date) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/events",
             method: "POST",
             data: {
@@ -49,7 +49,7 @@ class ajaxCalls {
     }
 
     putEvent(user, name, loc, date, id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/events/${id}`,
             method: "PUT",
             data: {

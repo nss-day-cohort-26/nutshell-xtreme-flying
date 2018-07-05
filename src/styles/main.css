@@ -2,6 +2,7 @@
     border: 1px solid black;
 }
 
+/* Messages Styles */
 #friends {
    margin: 1%; 
    display: flex;
@@ -62,4 +63,16 @@ textarea {
     overflow: auto;
     display: flex;
     flex-direction: column-reverse; */
+}
+
+/* Task CSS */
+.task-main-edit {
+    position: fixed;
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 1%;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+    
 }

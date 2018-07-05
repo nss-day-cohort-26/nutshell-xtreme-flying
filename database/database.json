@@ -55,7 +55,7 @@
       "timestamp": "13:12 3/12/16"
     },
     {
-      "id": 1,
+      "id": 2,
       "userId": 1,
       "url": "babble.com/newsworthystuff",
       "title": "I'm Perd Hadley",
@@ -81,22 +81,46 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 2,
-      "task": "Boogie",
-      "completed": true
+      "userId": "1",
+      "task": "New task",
+      "date": "2018-07-03T19:30",
+      "completed": "true",
+      "id": 1
     },
     {
-      "id": 1,
-      "userId": 1,
-      "task": "Figure out the meaning of life",
-      "completed": false
+      "userId": "1",
+      "task": "Edit",
+      "date": "2018-07-07T19:30",
+      "completed": "true",
+      "id": 2
     },
     {
-      "id": 1,
-      "userId": 1,
-      "task": "Ponder existence",
-      "completed": true
+      "userId": "1",
+      "task": "edit",
+      "date": "2018-07-06T09:05",
+      "completed": "true",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "create",
+      "date": "2018-07-12T09:05",
+      "completed": "true",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "create second",
+      "date": "2018-07-12T09:58",
+      "completed": "false",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "create third",
+      "date": "2018-07-08T09:58",
+      "completed": "false",
+      "id": 6
     }
   ]
 }

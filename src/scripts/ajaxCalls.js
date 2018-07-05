@@ -109,7 +109,7 @@ class ajaxCalls {
     }
 
     postFriend(user, yourid) {
-        $.ajax({
+       return $.ajax({
             url: "http://localhost:3000/friends",
             method: "POST",
             data: {
@@ -120,18 +120,13 @@ class ajaxCalls {
     }
 
     delFriend(id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/friends/${id}`,
             method: "DELETE"
         })
     }
-
-
-
-
 }
 
 const ajax = new ajaxCalls;
 
 module.exports = ajax;
-

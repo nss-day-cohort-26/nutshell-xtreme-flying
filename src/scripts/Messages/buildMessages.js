@@ -5,7 +5,7 @@ const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
 // const currentUser = require("./currentUser")
-let currentUse = 2;//dont let this stay 
+let currentUse = 2;//dont let this stay
 
 
 //This function creates an article where all of the message functionality goes, such as the messages, and the new message input field. It then executes an ajax call to the list of messages and runs the functions to build each message with a functional edit button.
@@ -21,7 +21,7 @@ const buildMessageArticle = function () {
     $("<button>").attr('type', 'button').attr('id', 'message-btn').text("Send Message").appendTo($inputDiv);
     $inputDiv.appendTo($messageArticle)
 
-    $("#messages").append($messageArticle) 
+    $("#messages").append($messageArticle)
 
     //this calls the function that adds the event listener to the submit button
     subMess();
@@ -36,14 +36,14 @@ const buildMessageArticle = function () {
             //this ajax call gets the userId of the message, which is used to give proper ids to the elements, and will be used to check for current user later on.
             ajax.getUser(element.userId).then(function (response) {
                 mess.textContent = `${response.name}: ${element.message}`
-                let userName = response.name 
+                let userName = response.name
                 if (element.userId == currentUse) {
-                    mess.classList = `message ${element.id}`
+                    mess.classList = `message`
                     // mess.id = `${response.id}`
                     $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess);
                     editMess(mess, userName);
                 } else {
-                    mess.classList = `friendMessage ${element.userId}`
+                    mess.classList = `friendMessage`
                     // mess.id = `${response.id}`
                 }
                 mess.id = `${element.id}`

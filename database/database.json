@@ -9,13 +9,48 @@
       "id": 2,
       "name": "UMMM ISthename",
       "email": "magic_hamster@yahoo.com"
+    },
+    {
+      "id": 3,
+      "name": "Jenn",
+      "email": "jenniferlawson000@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Leah Gwin",
+      "email": "leahgwin@gmail.com"
     }
   ],
   "friends": [
     {
-      "id": 1,
+      "id": 2,
+      "userId": 1,
+      "yourId": 3
+    },
+    {
+      "id": 3,
       "userId": 2,
-      "yourId": 1
+      "yourId": 3
+    },
+    {
+      "userId": "1",
+      "yourId": "1",
+      "id": 11
+    },
+    {
+      "userId": "3",
+      "yourId": "1",
+      "id": 13
+    },
+    {
+      "userId": "4",
+      "yourId": "1",
+      "id": 14
+    },
+    {
+      "userId": "4",
+      "yourId": "3",
+      "id": 15
     }
   ],
   "messages": [
@@ -43,6 +78,11 @@
       "userId": "1",
       "message": "  Another one for the books",
       "id": 6
+    },
+    {
+      "userId": "2",
+      "message": " YOU Dont STINK",
+      "id": 7
     }
   ],
   "news": [
@@ -140,8 +180,15 @@
       "userId": "1",
       "task": "New taskl",
       "date": "2018-07-12T11:56",
-      "completed": "false",
+      "completed": "true",
       "id": 10
+    },
+    {
+      "userId": "1",
+      "task": "Today I need to eat dinner",
+      "date": "2018-07-12T01:23",
+      "completed": "false",
+      "id": 11
     }
   ]
 }

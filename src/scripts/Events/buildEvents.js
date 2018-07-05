@@ -52,11 +52,13 @@ class buildEventSection {
         $("#eventModal").append(modal);
 
     }
-
+//this method is what makes events in the event-holder div
 buildSingleEvent() {
-    ajax.getField('events').then((eventsArray) =>  {
+    ajax.getField('events').then((eventsArray) =>  { //this ajax call needs to expand for current user.. that's the next step for this
         $("#events-holder").empty();
+        //this is writing to the DOM each event as well as the editing button
         eventsArray.forEach(eventObject => {
+            //appends to the event holder
             $("#events-holder").append($(`
                 <section id = "${eventObject.userId}">
                     <div id="name">${eventObject.name}</div>
@@ -64,6 +66,7 @@ buildSingleEvent() {
                     <div id="date">${eventObject.date}</div>
                     <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#editModal">Edit</button>
                 </section>`))
+                //this is the editing modal that opens when the edit button is clicked... this loads on page load
                 let editModal = $(`
                 <div class="modal" id = "editModal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
@@ -93,9 +96,9 @@ buildSingleEvent() {
           </div>
         </div>
         `)
-        console.log(editModal);
+        // console.log(editModal);
 
-        $("#editEventModal").append(editModal);
+        $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
         });
     })
 }

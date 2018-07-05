@@ -17,8 +17,16 @@ class ajaxCalls {
         })
     }
 
-    postMessage(user, msg) {
-        $.ajax({
+    getUser(userId) {
+        return $.ajax(`http://localhost:3000/users/${userId}`)
+    }
+
+    getMessage(messageId) {
+        return $.ajax(`http://localhost:3000/messages/${messageId}`)
+    }
+
+    postMessage(msg, user) {
+       return $.ajax({
             url: "http://localhost:3000/messages",
             method: "POST",
             data: {
@@ -29,7 +37,7 @@ class ajaxCalls {
     }
 
     putMessage(user, msg, id) {
-        $.ajax({
+       return $.ajax({
             url: `http://localhost:3000/messages/${id}`,
             method: "PUT",
             data: {
@@ -40,7 +48,7 @@ class ajaxCalls {
     }
 
     postEvent(user, name, loc, date) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/events",
             method: "POST",
             data: {
@@ -53,7 +61,7 @@ class ajaxCalls {
     }
 
     putEvent(user, name, loc, date, id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/events/${id}`,
             method: "PUT",
             data: {
@@ -66,7 +74,7 @@ class ajaxCalls {
     }
 
     postNews(user, title, url, syn, time) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/news",
             method: "POST",
             data: {
@@ -80,7 +88,7 @@ class ajaxCalls {
     }
 
     delNews(id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/news/${id}`,
             method: "DELETE"
         })
@@ -113,7 +121,7 @@ class ajaxCalls {
     }
 
     postFriend(user, yourid) {
-        $.ajax({
+       return $.ajax({
             url: "http://localhost:3000/friends",
             method: "POST",
             data: {
@@ -124,15 +132,11 @@ class ajaxCalls {
     }
 
     delFriend(id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/friends/${id}`,
             method: "DELETE"
         })
     }
-
-
-
-
 }
 
 const ajax = new ajaxCalls;

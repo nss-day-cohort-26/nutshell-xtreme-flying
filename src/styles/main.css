@@ -1,11 +1,28 @@
 .features {
     border: 1px solid black;
+    margin: 15px;
+}
+
+.nutshell {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxed {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Friend List Coded by Jenn*/
 #friends {
-    width: 25%;
+    width: 40%;
     padding-left: 30px;
+    height: auto;
 }
 
 #friends h1 {
@@ -40,8 +57,9 @@ li {
 #messages {
    margin: 1%;
    display: flex;
-   height: 25%;
-   width: 25%;
+   height: auto;
+   width: 40%;
+   display: flex;
 }
 
 #message-article {
@@ -108,5 +126,19 @@ textarea {
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
     z-index: 10;
+    display: block;
+}
 
+/* news */
+
+#news {
+    width: 400px;
+    height: auto;
+}
+
+/* Evnets */
+
+#events {
+    width: 400px;
+    height: auto;
 }

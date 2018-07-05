@@ -25,7 +25,7 @@ class buildTask {
                     </div>
                     <div>
                     <label for="task-time">Date/time:</label>
-                    <input type="datetime-local" id="task-time" name="task-time" 
+                    <input type="datetime-local" id="task-time" name="task-time"
                     value="${nextWeek}" min="${today}" max="${nextWeek}"
                     />
                     </div>
@@ -34,7 +34,7 @@ class buildTask {
                 <button id="task-make-btn">Submit</button>
                 <div id="task-list"></div>
             </div>
-            
+
         `)
 
     }
@@ -59,16 +59,16 @@ class buildTask {
                         // console.log(dueDate)
                         taskList.append(`
                         <div id="${thing.id}" class="task-card" data-title="${thing.task}" data-date="${thing.date}">
-                        <h4 class="task-card-title"><b>${thing.task} &emsp; ${timeLeft}</b></h4> 
+                        <h4 class="task-card-title"><b>${thing.task} &emsp; ${timeLeft}</b></h4>
                         <button class="task-complete-btn" id="${thing.id}">Job's Done</button>
                         <button class="task-edit-btn" id="${thing.id}">Edit</button>
                         </div>
-                        
+
                     `)
-                    
+
                     }
                 })
-                
+
 
             })
 

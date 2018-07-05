@@ -36,7 +36,7 @@ class ajaxCalls {
     }
 
     postEvent(user, name, loc, date) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/events",
             method: "POST",
             data: {
@@ -49,7 +49,7 @@ class ajaxCalls {
     }
 
     putEvent(user, name, loc, date, id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/events/${id}`,
             method: "PUT",
             data: {
@@ -62,7 +62,7 @@ class ajaxCalls {
     }
 
     postNews(user, title, url, syn, time) {
-        $.ajax({
+        return $.ajax({
             url: "http://localhost:3000/news",
             method: "POST",
             data: {
@@ -76,7 +76,7 @@ class ajaxCalls {
     }
 
     delNews(id) {
-        $.ajax({
+        return $.ajax({
             url: `http://localhost:3000/news/${id}`,
             method: "DELETE"
         })

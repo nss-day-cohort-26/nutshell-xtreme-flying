@@ -3,12 +3,20 @@
     {
       "id": 1,
       "name": "Jack Bob",
+      "password": "abc123",
       "email": "jack____bob@jACkbOb.co.r"
     },
     {
       "id": 2,
       "name": "UMMM ISthename",
+      "password": "abc123",
       "email": "magic_hamster@yahoo.com"
+    },
+    {
+      "name": "Evan Lusky",
+      "password": "jfjfjf",
+      "email": "ewlusky@gmail.com",
+      "id": 3
     }
   ],
   "friends": [
@@ -97,15 +105,29 @@
       "userId": "1",
       "task": "create second",
       "date": "2018-07-12T09:58",
-      "completed": "false",
+      "completed": "true",
       "id": 5
     },
     {
       "userId": "1",
-      "task": "create third",
+      "task": "create third edited",
       "date": "2018-07-08T09:58",
       "completed": "false",
       "id": 6
+    },
+    {
+      "userId": "1",
+      "task": "create another",
+      "date": "2018-07-05T10:48",
+      "completed": "false",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "task": "create another",
+      "date": "2018-07-07T10:48",
+      "completed": "false",
+      "id": 8
     }
   ]
 }

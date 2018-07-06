@@ -27,7 +27,7 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
             })
         }
     },
-    "callThisToBuildTheDom": {
+    "buildFriends": {
         value: function() {
             friendList.createFriendsTemplate()
             friendList.createFriendListComponent(1) // hard coded "yourId", will need to be changed with login feature

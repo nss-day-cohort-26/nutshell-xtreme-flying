@@ -63,11 +63,22 @@ li {
    display: flex;
 }
 
+
+
 #message-article {
     max-height: 500px;
     overflow-y:scroll;
     position:"relative";
 
+}
+
+.nameBtn {
+    display: inline;
+    text-decoration: underline;
+}
+.message textarea {
+    /* resize: vertical;       */
+    max-width: 100%
 }
 
 #input-div{
@@ -116,6 +127,15 @@ textarea {
     overflow: auto;
     display: flex;
     flex-direction: column-reverse; */
+}
+
+.edit-btn {
+    border-radius: 30px;
+    font-size: .5em;
+}
+.edit-submit-btn {
+    border-radius: 30px;
+    font-size: .5em;
 }
 
 /* Task CSS */

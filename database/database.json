@@ -61,7 +61,7 @@
   "messages": [
     {
       "userId": "2",
-      "message": " Maybe this will actually work. it is working",
+      "message": "      Maybe this will actually work. it sorta working.",
       "id": 1
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "userId": "2",
-      "message": "30",
+      "message": "Hey this works!",
       "id": 4
     },
     {
@@ -86,18 +86,8 @@
     },
     {
       "userId": "2",
-      "message": "30",
+      "message": "Hey",
       "id": 7
-    },
-    {
-      "userId": "2",
-      "message": "hey friends!!!!",
-      "id": 8
-    },
-    {
-      "userId": "2",
-      "message": "Newset Message",
-      "id": 9
     }
   ],
   "news": [

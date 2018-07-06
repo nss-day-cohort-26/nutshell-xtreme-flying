@@ -109,6 +109,7 @@ class ajaxCalls {
     }
 
     postTask(user, task, done, date) {
+        console.log("post Task");
         return $.ajax({
             url: "http://localhost:3000/tasks",
             method: "POST",

@@ -78,6 +78,7 @@ button .delete {
 
 }
 
+
 .nameBtn {
     display: inline;
     text-decoration: underline;
@@ -113,10 +114,7 @@ button .delete {
     flex-direction: column-reverse; */
 }
 
-textarea {
-    background: #0B93F6;
-    border-radius: 25px;
-}
+
 
 .friendMessage{
     border-radius: 25px;
@@ -144,21 +142,7 @@ textarea {
     font-size: .5em;
 }
 
-/* Task CSS */
-.task-main-edit {
-    position: fixed;
-    background-color: #fefefe;
-    margin: auto; /* 15% from the top and centered */
-    padding: 1%;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-    z-index: 10;
 
-}
-#tasks {
-    display: inline-block;
-    width: 65%;
-}
 
 /* news */
 
@@ -304,6 +288,11 @@ span.psw {
     align-items: center;
   }
 
+.articles {
+    margin: 10px;
+    border: 1px black solid;
+    padding: 5px;
+}
   /* -------------------ALL THIS AT TOP------------------ */
 
 
@@ -322,4 +311,24 @@ span.psw {
 
 .btn-delete {
     border-radius: 0.5em;
+}
+/* Task CSS */
+.task-main-edit {
+    position: fixed;
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 1%;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+
+}
+#tasks {
+    display: inline-block;
+    width: 65%;
+}
+
+textarea {
+    background: #0B93F6;
+    border-radius: 25px;
 }

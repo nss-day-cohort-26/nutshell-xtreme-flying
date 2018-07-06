@@ -15,6 +15,7 @@ const bLog = require('./buildLogin.js');
                 // console.log(user[0].password);
                 if (user.length > 0 && logPass == user[0].password) {
                     sessionStorage.setItem("User", user[0].id);
+                    $('#userName-top').text(user[0].name)
                     bLog.Reset();
                 } else {
                     alert("We're Sorry, it looks like you may have mistyped your email address or password.")
@@ -29,6 +30,7 @@ const bLog = require('./buildLogin.js');
         AJ.postUser(regName, regPass, regEmail)
             .then(user => {
                 sessionStorage.setItem("User", user.id);
+                $('#userName-top').text(user.name)
                 bLog.Reset();
             }
             );

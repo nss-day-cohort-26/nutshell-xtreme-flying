@@ -1,9 +1,10 @@
 const $ = require("jquery"); 
 
-const scrollBottom = function () { 
-    $("#message-article").scrollTop = $("#message-article").scrollHeight;  
+const scrollBottom = function () {  
+    $("#message-box").scrollTop = $("#message-box").scrollHeight  
+    // $("#message-input").focus(); 
 } 
     
 
-scrollBottom();
+scrollBottom(); 
 module.exports = scrollBottom; 

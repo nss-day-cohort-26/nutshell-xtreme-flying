@@ -46,7 +46,7 @@ buildNews: {
                         const $url = $("<p>").text(`Source: ${key.url}`).appendTo($holderSec);
                         const $desc = $("<p>").text(`Description: ${key.synopsis}`).appendTo($holderSec);
                         const $timestamp = $("<p>").text(key.timestamp).appendTo($holderSec);
-                        const $creatorName = $("<p>").appendTo($holderSec);
+                        let $creatorName = $("<p>").text("").appendTo($holderSec);
                         if(key.userId === sessionStorage.getItem("User")){
                             $creatorName.text("You");
                         }else {

@@ -51,7 +51,9 @@ class buildTask {
                 taskList.empty();
                 tasks.forEach(thing => {
                     // console.log('taskPopulate-thing', thing.completed);
-                    if (thing.completed == "false") {
+                    const User = sessionStorage.getItem("User");
+                    
+                    if (thing.completed == "false" && thing.userID == User) {
                         // console.log(thing);
                         const dueDate = (new Date(thing.date) - Date.now());
                         const diff = new moment.duration(dueDate);

@@ -129,7 +129,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.lb {
     background-color: lightskyblue;
     color: white;
     padding: 14px 20px;

@@ -5,6 +5,20 @@ class ajaxCalls {
         return $.ajax(`http://localhost:3000/${resource}`)
     }
 
+    allFriends(){
+        return $.ajax(`http://localhost:3000/friends`)
+            .then(friends => {
+                const fList = [];
+                const User = sessionStorage.getItem("User");
+                friends.forEach(friend => {
+                    if (friend.yourId == User){
+                        fList.push(friend.userId);
+                    }
+                });
+                return fList;
+            })
+    }
+
     postUser(name, password, email) {
         return $.ajax({
             url: "http://localhost:3000/users",

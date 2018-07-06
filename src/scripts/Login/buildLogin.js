@@ -16,8 +16,8 @@ class buildLogin {
         const wholePage = $('#page');
         wholePage.empty();
         loginDiv.append(`
-        <button id="login-btn" class="logbut">Login</button>
-        <button id="register-btn" class="logbut">Register</button>
+        <button id="login-btn" class="logbut lb">Login</button>
+        <button id="register-btn" class="logbut lb">Register</button>
         
     
 
@@ -36,14 +36,14 @@ class buildLogin {
                 </label>
                 <input type="password" id="log-pass" placeholder="Enter Password" name="psw" required>
 
-                <button id="login-submit">Login</button>
+                <button id="login-submit" class="lb">Login</button>
                 <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn lb">Cancel</button>
                 <span class="psw">Forgot
                 <a href="#">password?</a>
                 </span>
@@ -71,14 +71,14 @@ class buildLogin {
                 </label>
                 <input type="password" id="reg-pass" placeholder="Enter Password" name="psw" required>
 
-                <button id="register-submit">Register</button>
+                <button id="register-submit" class="lb">Register</button>
                 <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn lb">Cancel</button>
                 <span class="psw">Forgot
                 <a href="#">password?</a>
                 </span>
@@ -99,7 +99,7 @@ class buildLogin {
         loginDiv.empty();
         const wholePage = $('#page');
         wholePage.append(`
-        <button id="logreg">Log In</button>
+        <button id="logreg" class="lb">Log In</button>
         <div id="events" class="features"></div>
         <div id="messages" class="features"></div>
         <div id="news" class="features"></div>

@@ -37,29 +37,21 @@
       "id": 6
     },
     {
-<<<<<<< HEAD
       "name": "harambe",
       "password": "rip",
       "email": "harambe@harambe.com",
       "id": 7
     },
-    {
-      "name": "harambe",
-      "password": "rip",
-      "email": "harambe@harambe.com",
-      "id": 8
-=======
       "name": "Your Mom",
       "password": "milf",
       "email": "yourmom@thebomb.com",
-      "id":8
+      "id": 8
     },
     {
       "name": "newUser",
       "password": "password",
       "email": "user@this.com",
       "id": 7
->>>>>>> master
     }
   ],
   "friends": [
@@ -94,7 +86,6 @@
       "id": 19
     },
     {
-<<<<<<< HEAD
       "userId": "4",
       "yourId": "5",
       "id": 20
@@ -123,41 +114,26 @@
       "userId": "5",
       "yourId": "7",
       "id": 25
-=======
-      "userId": "1",
-      "yourId": "4",
-      "id": 20
     },
     {
-      "userId": "5",
-      "yourId": "4",
-      "id": 21
+      "userId": "4",
+      "yourId": "6",
+      "id": 29
     },
     {
       "userId": "2",
-      "yourId": "4",
-      "id": 22
+      "yourId": "6",
+      "id": 30
     },
     {
-      "userId": "6",
-      "yourId": "7",
-      "id": 24
+      "userId": "8",
+      "yourId": "6",
+      "id": 31
     },
     {
       "userId": "1",
-      "yourId": "7",
-      "id": 25
-    },
-    {
-      "userId": "7",
-      "yourId": "4",
-      "id": 26
-    },
-    {
-      "userId": "6",
-      "yourId": "4",
-      "id": 27
->>>>>>> master
+      "yourId": "6",
+      "id": 32
     }
   ],
   "messages": [
@@ -207,7 +183,6 @@
       "id": 10
     },
     {
-<<<<<<< HEAD
       "userId": "5",
       "message": "hello pals",
       "id": 11
@@ -220,15 +195,6 @@
     {
       "userId": "5",
       "message": "this works!",
-=======
-      "userId": "6",
-      "message": "I'm trying some crap out.",
-      "id": 12
-    },
-    {
-      "userId": "6",
-      "message": "This",
->>>>>>> master
       "id": 13
     }
   ],
@@ -242,19 +208,19 @@
       "id": 3
     },
     {
-      "userId": "1",
-<<<<<<< HEAD
-      "title": "pizza is good",
-      "url": "www.pizza.com",
-      "synopsis": "yum",
-      "timestamp": "7/6/2018 13:48",
-=======
       "title": "Flood at NSS",
       "url": "www.nss.com",
       "synopsis": "Flooding spotted on 07/06/2018",
       "timestamp": "7/6/2018 13:25",
->>>>>>> master
       "id": 4
+    },
+    {
+      "userId": "8",
+      "title": "Ur Mom dissed me",
+      "url": "www.nss.com",
+      "synopsis": "YourMomon 07/06/2018",
+      "timestamp": "7/6/2018 13:25",
+      "id": 5
     }
   ],
   "events": [
@@ -309,13 +275,8 @@
     },
     {
       "userId": "1",
-<<<<<<< HEAD
       "name": "nutshell",
       "location": "here",
-=======
-      "name": "sdf",
-      "location": "ffffffff",
->>>>>>> master
       "date": "2018-07-10T19:30",
       "id": 10
     }
@@ -333,7 +294,6 @@
       "task": "friday test",
       "date": "2018-07-13T02:02",
       "completed": "true",
-<<<<<<< HEAD
       "id": 3
     },
     {
@@ -356,9 +316,6 @@
       "date": "2018-07-13T01:48",
       "completed": "false",
       "id": 6
-=======
-      "id": 2
->>>>>>> master
     }
   ]
 }

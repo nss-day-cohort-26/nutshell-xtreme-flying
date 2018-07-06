@@ -81,21 +81,6 @@
       "id": 19
     },
     {
-      "userId": "1",
-      "yourId": "4",
-      "id": 20
-    },
-    {
-      "userId": "5",
-      "yourId": "4",
-      "id": 21
-    },
-    {
-      "userId": "2",
-      "yourId": "4",
-      "id": 22
-    },
-    {
       "userId": "6",
       "yourId": "7",
       "id": 24
@@ -104,16 +89,6 @@
       "userId": "1",
       "yourId": "7",
       "id": 25
-    },
-    {
-      "userId": "7",
-      "yourId": "4",
-      "id": 26
-    },
-    {
-      "userId": "6",
-      "yourId": "4",
-      "id": 27
     },
     {
       "userId": "4",
@@ -134,6 +109,26 @@
       "userId": "1",
       "yourId": "6",
       "id": 32
+    },
+    {
+      "userId": "2",
+      "yourId": "4",
+      "id": 34
+    },
+    {
+      "userId": "6",
+      "yourId": "4",
+      "id": 35
+    },
+    {
+      "userId": "1",
+      "yourId": "4",
+      "id": 36
+    },
+    {
+      "userId": "8",
+      "yourId": "4",
+      "id": 37
     }
   ],
   "messages": [
@@ -191,6 +186,11 @@
       "userId": "6",
       "message": "This",
       "id": 13
+    },
+    {
+      "userId": "4",
+      "message": "HI",
+      "id": 14
     }
   ],
   "news": [
@@ -221,49 +221,49 @@
   ],
   "events": [
     {
-      "userId": "1",
+      "userId": "2",
       "name": "yes it login edit 3",
       "location": "Nash Software School",
       "date": "2018-07-20T07:30",
       "id": 3
     },
     {
-      "userId": "1",
+      "userId": "3",
       "name": "Hairy Butt Club",
       "location": "Your Mom's House",
       "date": "2018-07-10T19:30",
       "id": 4
     },
     {
-      "userId": "1",
+      "userId": "4",
       "name": "nss PROM",
       "location": "jisie's house",
       "date": "2018-07-18T16:00",
       "id": 5
     },
     {
-      "userId": "1",
+      "userId": "5",
       "name": "nss hot dog eating contest",
       "location": "parking lot picnic tables",
       "date": "2018-07-28T07:30",
       "id": 6
     },
     {
-      "userId": "1",
+      "userId": "6",
       "name": "go kayaking",
       "location": "aarons house",
       "date": "2019-07-15T19:30",
       "id": 7
     },
     {
-      "userId": "1",
+      "userId": "7",
       "name": "testin",
       "location": "jaeogn",
       "date": "2018-07-10T19:30",
       "id": 8
     },
     {
-      "userId": "1",
+      "userId": "8",
       "name": "log event",
       "location": "soemf",
       "date": "2018-07-10T19:30",
@@ -291,6 +291,13 @@
       "date": "2018-07-13T02:02",
       "completed": "true",
       "id": 2
+    },
+    {
+      "userId": "4",
+      "task": "task",
+      "date": "2018-07-13T02:17",
+      "completed": "false",
+      "id": 3
     }
   ]
 }

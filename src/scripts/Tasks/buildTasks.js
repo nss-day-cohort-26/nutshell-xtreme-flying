@@ -17,8 +17,8 @@ class buildTask {
         taskDiv.append(`
         <button id="task-main-btn">To Do</button>
             <div id="task-main">
-                <fieldset>
-                    <legend>New Task</legend>
+                <fieldset id="task-main">
+                    <legend id="task-main">New Task</legend>
                     <div>
                         <label for="task-title">Title:</label>
                         <input type="text" id="task-title" name="task-title" />

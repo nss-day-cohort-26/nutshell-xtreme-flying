@@ -62,6 +62,18 @@ function taskAll() {
         AJ.putTask(sessionStorage.getItem("User"), title.val(), 'false', date.val(), passId)
             .then(bTasks.taskPopulate)
     }
+    function editSubmitR(passId) {
+        console.log(event.which);
+        if (event.which == 13) {
+            const title = $('#task-edit-title');
+            const date = $('#task-edit-time');
+            // console.log(id);
+            // console.log(targetTask) // USERID USED HERE
+            AJ.putTask(sessionStorage.getItem("User"), title.val(), 'false', date.val(), passId)
+                .then(bTasks.taskPopulate)
+        }
+
+    }
 
 
     // ----------------------- Edit Button
@@ -75,8 +87,8 @@ function taskAll() {
         console.log(moment().add(7, 'd').format("YYYY-MM-DDThh:mm"));
         editForm.append(`
     <div class="task-main-edit">
-    <fieldset>
-        <legend>Edit Task</legend>
+    <fieldset id="task-main">
+        <legend id="task-main">Edit Task</legend>
         <div>
             <label for="task-title">Title:</label>
             <input type="text" id="task-edit-title" name="task-title" value="${editForm[0].dataset.title}" />
@@ -104,6 +116,7 @@ function taskAll() {
         newForm.show(300);
         // console.log(newForm);
         newForm.on('click', "#task-make-edit-btn", () => { editSubmit(e.target.id) })
+        newForm.on('keypress', () => { editSubmitR(e.target.id) })
     }
 
     taskDiv.on('click', ".task-edit-btn", editTask)

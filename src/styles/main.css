@@ -302,12 +302,32 @@ span.psw {
     z-index: 10;
 
 }
+
+#task-main fieldset { 
+        display: block;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 0.35em;
+        padding-bottom: 0.625em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border: 2px groove;
+    }
+    
+#task-main legend {
+        display: block;
+        padding-left: 2px;
+        padding-right: 2px;
+        border: none;
+        width: auto;
+    }
+
 #tasks {
     display: inline-block;
-    width: 65%;
 }
 
 textarea {
     background: #0B93F6;
     border-radius: 25px;
 }
+

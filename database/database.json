@@ -81,16 +81,6 @@
       "id": 19
     },
     {
-      "userId": "5",
-      "yourId": "4",
-      "id": 21
-    },
-    {
-      "userId": "2",
-      "yourId": "4",
-      "id": 22
-    },
-    {
       "userId": "6",
       "yourId": "7",
       "id": 24
@@ -101,19 +91,44 @@
       "id": 25
     },
     {
-      "userId": "6",
-      "yourId": "4",
+      "userId": "4",
+      "yourId": "6",
       "id": 29
     },
     {
+      "userId": "2",
+      "yourId": "6",
+      "id": 30
+    },
+    {
       "userId": "8",
-      "yourId": "4",
+      "yourId": "6",
+      "id": 31
+    },
+    {
+      "userId": "1",
+      "yourId": "6",
       "id": 32
+    },
+    {
+      "userId": "2",
+      "yourId": "4",
+      "id": 34
+    },
+    {
+      "userId": "6",
+      "yourId": "4",
+      "id": 35
     },
     {
       "userId": "1",
       "yourId": "4",
-      "id": 33
+      "id": 36
+    },
+    {
+      "userId": "8",
+      "yourId": "4",
+      "id": 37
     }
   ],
   "messages": [
@@ -186,53 +201,69 @@
       "synopsis": "log test",
       "timestamp": "7/6/2018 11:27",
       "id": 3
+    },
+    {
+      "userId": "1",
+      "title": "Flood at NSS",
+      "url": "www.nss.com",
+      "synopsis": "Flooding spotted on 07/06/2018",
+      "timestamp": "7/6/2018 13:25",
+      "id": 4
+    },
+    {
+      "userId": "8",
+      "title": "Ur Mom dissed me",
+      "url": "www.nss.com",
+      "synopsis": "YourMomon 07/06/2018",
+      "timestamp": "7/6/2018 13:25",
+      "id": 5
     }
   ],
   "events": [
     {
-      "userId": "1",
+      "userId": "2",
       "name": "yes it login edit 3",
       "location": "Nash Software School",
       "date": "2018-07-20T07:30",
       "id": 3
     },
     {
-      "userId": "1",
+      "userId": "3",
       "name": "Hairy Butt Club",
       "location": "Your Mom's House",
       "date": "2018-07-10T19:30",
       "id": 4
     },
     {
-      "userId": "1",
+      "userId": "4",
       "name": "nss PROM",
       "location": "jisie's house",
       "date": "2018-07-18T16:00",
       "id": 5
     },
     {
-      "userId": "1",
+      "userId": "5",
       "name": "nss hot dog eating contest",
       "location": "parking lot picnic tables",
       "date": "2018-07-28T07:30",
       "id": 6
     },
     {
-      "userId": "1",
+      "userId": "6",
       "name": "go kayaking",
       "location": "aarons house",
       "date": "2019-07-15T19:30",
       "id": 7
     },
     {
-      "userId": "1",
+      "userId": "7",
       "name": "testin",
       "location": "jaeogn",
       "date": "2018-07-10T19:30",
       "id": 8
     },
     {
-      "userId": "1",
+      "userId": "8",
       "name": "log event",
       "location": "soemf",
       "date": "2018-07-10T19:30",

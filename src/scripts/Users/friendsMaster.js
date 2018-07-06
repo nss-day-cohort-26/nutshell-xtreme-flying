@@ -2,6 +2,8 @@
 const $ = require("jquery")
 const ajax = require("../ajaxCalls")
 const friendList = require("./buildFriends")
+const news = require("./../News/buildNews")
+const buildEvent = require("./../Events/buildEvents")
 
 const friendsMaster = Object.create({}, { //this function is called upon "add friend" click
     "addNewFriend": {
@@ -11,9 +13,11 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
                 usersArray.forEach(userObject =>{
                     // console.log(userObject.id)
                     if(userObject.name.toLowerCase() === nameInputField) { //if the input value = a user name,
-                        ajax.postFriend(userObject.id, sessionStorage.getItem("User")).then( // the friend is added to the friends array.
-                            friendList.createFriendListComponent(sessionStorage.getItem("User")) //reloads the dom, the number (second parameter) should be the current user ID
-                        )
+                        ajax.postFriend(userObject.id, sessionStorage.getItem("User")).then((require) => { // the friend is added to the friends array.
+                            friendList.createFriendListComponent(sessionStorage.getItem("User"))
+                            news.getArticles()
+                            buildEvent.buildSingleEvent()
+                        })
                     }
                 })
             })
@@ -24,6 +28,8 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
             // console.log(Number(event.target.id)) //the delete button has an id of the friend's unique id
             ajax.delFriend(event.target.id).then((response)=>{ //makes an ajax call to remove the friend from the friend array.
                 friendList.createFriendListComponent(sessionStorage.getItem("User")) //reloads the dom
+                news.getArticles()
+                buildEvent.buildSingleEvent()
             })
         }
     },
@@ -36,6 +42,7 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
             $("#add-new-friend").on("click", friendsMaster.addNewFriend) //event listener for adding a new friend button
             $("#find-your-friends").hide() //hides the find friend field.
             $("#find-new-friend").on("click", function(){$("#find-your-friends").toggle()}) // shows the find friend field on click
+
         }
     }
 

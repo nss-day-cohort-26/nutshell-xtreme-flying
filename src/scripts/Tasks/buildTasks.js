@@ -16,7 +16,7 @@ class buildTask {
         const nextWeek = new moment().add(7,'d').format("YYYY-MM-DDThh:mm")
         taskDiv.append(`
         <button id="task-main-btn">To Do</button>
-            <div id="task-main">
+            <div id="task-main ">
                 <fieldset>
                     <legend>New Task</legend>
                     <div>
@@ -52,7 +52,7 @@ class buildTask {
                 tasks.forEach(thing => {
                     // console.log('taskPopulate-thing', thing.completed);
                     const User = sessionStorage.getItem("User");
-                    
+
                     if (thing.completed == "false" && thing.userID == User) {
                         // console.log(thing);
                         const dueDate = (new Date(thing.date) - Date.now());

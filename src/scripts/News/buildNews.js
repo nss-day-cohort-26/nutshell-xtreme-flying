@@ -20,27 +20,33 @@ buildNews: {
             //When adding info into fields, click create and it puts it into the database and refreshes DOM
             const $createButton = $("<button>").text("Create").appendTo("#mainNewsSec").click(function(){
                 const fullTime = events.getDate()
-                ajax.postNews(1, $titleInput.val(), $urlInput.val(), $descInput.val(), fullTime)
+                const currentUser = sessionStorage.getItem("User")
+                ajax.postNews(currentUser, $titleInput.val(), $urlInput.val(), $descInput.val(), fullTime)
                 .then(item => {
                 newsDomMethods.clearDom();
             })
             })
         })
             const getArticles = () => {
-                ajax.getField("news")
+                ajax.getField("news?_expand=user")
                 .then(item => {
-                    //*TODO LATER* Add conditions for user ID to get name of who posted
+                    ajax.allFriends()
+                    .then(friendsList => {
+                        friendsList.push(sessionStorage.getItem("User"));
+                        console.log("friendslist", friendsList);   
                     //This is sorting each article by newest first
                     item.sort(function(a,b){
                         return new Date(b.timestamp) - new Date(a.timestamp);
                         });
                         //This is getting each article and posting it to the DOM.
                     item.forEach(key => {
+                        if(friendsList.includes(key.userId)){
                         const $holderSec = $("<section>").addClass("articles").attr("id", key.id);
                         const $title = $("<h3>").text(key.title).appendTo($holderSec);
                         const $url = $("<p>").text(`Source: ${key.url}`).appendTo($holderSec);
                         const $desc = $("<p>").text(`Description: ${key.synopsis}`).appendTo($holderSec);
                         const $timestamp = $("<p>").text(key.timestamp).appendTo($holderSec);
+                        const $creatorName = $("<p>").text(key.user.name).appendTo($holderSec);
                         //Delete button for deleting articles
                         const $deleteButton = $("<button>").text("delete").appendTo($holderSec).click(function() {
                             // console.log(event.target.parentNode.id);
@@ -49,11 +55,14 @@ buildNews: {
                             .then(item => {
                             newsDomMethods.clearDom();
                         })
+                    
                         });
                         $holderSec.appendTo("#articleSec");
+                    }
                     })
                         // console.log(item)
                 })
+            })
             }
             getArticles()
         }

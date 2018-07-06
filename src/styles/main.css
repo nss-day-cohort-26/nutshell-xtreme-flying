@@ -51,6 +51,11 @@ li {
 
 }
 
+.nameBtn {  
+    display: inline; 
+    text-decoration: underline;
+}
+
 #input-div{
     /* position: absolute; */
     position: relative;

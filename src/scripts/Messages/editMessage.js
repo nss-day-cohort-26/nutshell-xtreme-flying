@@ -13,7 +13,7 @@ const editMess = function (mess) {
         let text = $(`#${mess.id}`)    
         text = text.text() 
         text = text.slice(0, -4)
-        text = /:(.+)/.exec(text)[1];   
+        // text = /:(.+)/.exec(text)[1]; 
         
         $(`#${mess.id}`).text("") 
         // console.log($(`#${mess.id}`)) 
@@ -25,7 +25,7 @@ const editMess = function (mess) {
                     let newMessage = $(".edit-submit-textArea").val();
                     $("#messages").empty();   
                     
-                    mess.id = `${response.id}` 
+                    mess.id = response.id   
                     ajax.putMessage(response.userId, newMessage, mess.id).then(
                         function () {
                             const buildMessages = require("./buildMessages");   

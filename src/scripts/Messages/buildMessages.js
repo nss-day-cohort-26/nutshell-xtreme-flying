@@ -35,8 +35,9 @@ const buildMessageArticle = function () {
 
             //this ajax call gets the userId of the message, which is used to give proper ids to the elements, and will be used to check for current user later on.
             ajax.getUser(element.userId).then(function (response) {
-                mess.textContent = `${response.name}: ${element.message}`
+
                 let userName = response.name
+                mess.textContent = `${element.message}` 
                 if (element.userId == currentUse) {
                     mess.classList = `message`
                     // mess.id = `${response.id}`
@@ -47,9 +48,14 @@ const buildMessageArticle = function () {
                     // mess.id = `${response.id}`
                 }
                 mess.id = `${element.id}`
+                
 
                 $("#message-box").append(mess)
-
+                let nameBtn = document.createElement("p") 
+                nameBtn.className = "nameBtn"  
+                nameBtn.textContent = `${response.name}:`    
+                mess.prepend(nameBtn)      
+ 
             })
         }
         )

@@ -3,7 +3,9 @@
 const $ = require("jquery");
 const ajax = require("./../ajaxCalls.js")
 const editMess = require("./editMessage")
+const scrollBottom = require("./scrollBottom")  
 // const currentUser = require("./currentUser")
+
 
 
 
@@ -19,7 +21,7 @@ const submitMess = function () {
                 mess.textContent = `${response.name}: ${message}`
                 mess.className += `message ${userId}`
                 $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess); 
-                editMess(mess); 
+                editMess(mess);  
             })   
 
 
@@ -33,8 +35,10 @@ const submitMess = function () {
                 })
 
         }
+        let currentUse = sessionStorage.getItem("User") 
         $("#message-input").val("")
-        makeMess(message, 2); //change to work with current user
+        makeMess(message, currentUse);  
+        scrollBottom();
  
     })
 }

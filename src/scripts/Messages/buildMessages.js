@@ -4,6 +4,7 @@ const $ = require("jquery")
 const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
+const addMessFriend = require("./addFriendMessage")
 // const currentUser = require("./currentUser")
 let currentUse = 2;//dont let this stay
 
@@ -49,12 +50,13 @@ const buildMessageArticle = function () {
                 }
                 mess.id = `${element.id}`
                 
-
+                
                 $("#message-box").append(mess)
                 let nameBtn = document.createElement("p") 
                 nameBtn.className = "nameBtn"  
                 nameBtn.textContent = `${response.name}:`    
                 mess.prepend(nameBtn)      
+                addMessFriend(nameBtn);
  
             })
         }

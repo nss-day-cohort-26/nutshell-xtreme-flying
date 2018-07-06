@@ -79,7 +79,7 @@ class buildTask {
 
 
 const bTask = new buildTask;
-bTask.taskBones();
-bTask.taskPopulate();
+// bTask.taskBones();
+// bTask.taskPopulate();
 
 module.exports = bTask;

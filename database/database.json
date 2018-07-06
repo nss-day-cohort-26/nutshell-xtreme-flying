@@ -109,6 +109,11 @@
       "userId": "1",
       "message": "This is a new message from me.",
       "id": 9
+    },
+    {
+      "userId": "6",
+      "message": "I would like to say something.",
+      "id": 10
     }
   ],
   "news": [

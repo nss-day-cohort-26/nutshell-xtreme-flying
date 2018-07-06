@@ -37,6 +37,12 @@
       "id": 6
     },
     {
+      "name": "Your Mom",
+      "password": "milf",
+      "email": "yourmom@thebomb.com",
+      "id":8
+    },
+    {
       "name": "newUser",
       "password": "password",
       "email": "user@this.com",
@@ -75,14 +81,39 @@
       "id": 19
     },
     {
-      "userId": "4",
-      "yourId": "7",
+      "userId": "1",
+      "yourId": "4",
       "id": 20
+    },
+    {
+      "userId": "5",
+      "yourId": "4",
+      "id": 21
+    },
+    {
+      "userId": "2",
+      "yourId": "4",
+      "id": 22
+    },
+    {
+      "userId": "6",
+      "yourId": "7",
+      "id": 24
     },
     {
       "userId": "1",
       "yourId": "7",
-      "id": 21
+      "id": 25
+    },
+    {
+      "userId": "7",
+      "yourId": "4",
+      "id": 26
+    },
+    {
+      "userId": "6",
+      "yourId": "4",
+      "id": 27
     }
   ],
   "messages": [
@@ -113,28 +144,23 @@
     },
     {
       "userId": "2",
-      "message": "You have a hairy Butt",
+      "message": "This is the first message from me!",
       "id": 7
     },
     {
-      "userId": "2",
-      "message": "hey friends!!!!",
+      "userId": "6",
+      "message": "THis is my for real first message",
       "id": 8
     },
     {
-      "userId": "1",
-      "message": "This is a new message from me.",
+      "userId": "4",
+      "message": "Hey you guys!",
       "id": 9
     },
     {
-      "userId": "6",
-      "message": "I would like to say something.",
+      "userId": "4",
+      "message": "Hello everyone",
       "id": 10
-    },
-    {
-      "userId": "7",
-      "message": "This is a message from the new user!",
-      "id": 11
     },
     {
       "userId": "6",
@@ -155,6 +181,14 @@
       "synopsis": "log test",
       "timestamp": "7/6/2018 11:27",
       "id": 3
+    },
+    {
+      "userId": "1",
+      "title": "Flood at NSS",
+      "url": "www.nss.com",
+      "synopsis": "Flooding spotted on 07/06/2018",
+      "timestamp": "7/6/2018 13:25",
+      "id": 4
     }
   ],
   "events": [
@@ -236,139 +270,6 @@
       "date": "2018-07-08T01:00",
       "completed": "true",
       "id": 3
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 4
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 5
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 6
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 7
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 8
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 9
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 11
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 12
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 13
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 14
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 15
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 16
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 17
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 18
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 19
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 20
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 21
-    },
-    {
-      "userId": "1",
-      "task": "lkja;klja;lkjdf",
-      "date": "2018-07-13T01:25",
-      "completed": "false",
-      "id": 22
     }
   ]
 }

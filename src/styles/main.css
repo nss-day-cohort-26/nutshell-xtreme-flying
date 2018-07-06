@@ -11,6 +11,7 @@
 .column {
     display: flex;
     flex-direction: column;
+    width: 30%;
 }
 
 .boxed {
@@ -20,7 +21,7 @@
 
 /* Friend List Coded by Jenn*/
 #friends {
-    width: 40%;
+    width: 90%;
     padding-left: 30px;
     height: auto;
 }
@@ -58,7 +59,7 @@ li {
    margin: 1%;
    display: flex;
    height: auto;
-   width: 40%;
+   width: 90%;
    display: flex;
 }
 

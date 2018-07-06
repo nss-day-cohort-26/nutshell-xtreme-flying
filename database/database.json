@@ -61,7 +61,7 @@
   "messages": [
     {
       "userId": "2",
-      "message": "UMMM ISthename: Maybe this will actually work. it is working",
+      "message": "      Maybe this will actually work. it is working",
       "id": 1
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "userId": "2",
-      "message": "kj;lkj;lkj",
+      "message": " THis is another test of this",
       "id": 4
     },
     {
@@ -83,21 +83,6 @@
       "userId": "1",
       "message": "  Another one for the books",
       "id": 6
-    },
-    {
-      "userId": "2",
-      "message": "Opps",
-      "id": 7
-    },
-    {
-      "userId": "2",
-      "message": "30",
-      "id": 8
-    },
-    {
-      "userId": "2",
-      "message": "newer message",
-      "id": 9
     }
   ],
   "news": [

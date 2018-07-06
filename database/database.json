@@ -29,6 +29,12 @@
       "name": "Leah Gwin",
       "email": "leahgwin@gmail.com",
       "password": "password"
+    },
+    {
+      "name": "William",
+      "password": "pass",
+      "email": "wkkimball043@gmail.com",
+      "id": 6
     }
   ],
   "friends": [
@@ -41,11 +47,6 @@
       "id": 3,
       "userId": 2,
       "yourId": 3
-    },
-    {
-      "userId": "1",
-      "yourId": "1",
-      "id": 11
     },
     {
       "userId": "4",
@@ -71,7 +72,7 @@
   "messages": [
     {
       "userId": "2",
-      "message": "log edit test",
+      "message": "      Maybe this will actually work. it sorta working.",
       "id": 1
     },
     {
@@ -81,7 +82,7 @@
     },
     {
       "userId": "2",
-      "message": "THis is another test of this",
+      "message": "Hey this works!",
       "id": 4
     },
     {
@@ -105,30 +106,17 @@
       "id": 8
     },
     {
-      "userId": "2",
-      "message": "newer message",
+      "userId": "1",
+      "message": "This is a new message from me.",
       "id": 9
     },
     {
-      "userId": "2",
-      "message": "test bottom up",
+      "userId": "6",
+      "message": "I would like to say something.",
       "id": 10
-    },
-    {
-      "userId": "2",
-      "message": "log new message test",
-      "id": 11
     }
   ],
   "news": [
-    {
-      "id": 2,
-      "userId": 1,
-      "url": "babble.com/newsworthystuff",
-      "title": "I'm Perd Hadley",
-      "synopsis": "And this is my description",
-      "timestamp": "04:01 6/31/14"
-    },
     {
       "userId": "1",
       "title": "Log news test",

@@ -35,6 +35,12 @@
       "password": "pass",
       "email": "wkkimball043@gmail.com",
       "id": 6
+    },
+    {
+      "name": "newUser",
+      "password": "password",
+      "email": "user@this.com",
+      "id": 7
     }
   ],
   "friends": [
@@ -67,6 +73,16 @@
       "userId": "4",
       "yourId": "1",
       "id": 19
+    },
+    {
+      "userId": "4",
+      "yourId": "7",
+      "id": 20
+    },
+    {
+      "userId": "1",
+      "yourId": "7",
+      "id": 21
     }
   ],
   "messages": [
@@ -114,6 +130,21 @@
       "userId": "6",
       "message": "I would like to say something.",
       "id": 10
+    },
+    {
+      "userId": "7",
+      "message": "This is a message from the new user!",
+      "id": 11
+    },
+    {
+      "userId": "6",
+      "message": "I'm trying some crap out.",
+      "id": 12
+    },
+    {
+      "userId": "6",
+      "message": "This",
+      "id": 13
     }
   ],
   "news": [
@@ -175,6 +206,13 @@
       "location": "soemf",
       "date": "2018-07-10T19:30",
       "id": 9
+    },
+    {
+      "userId": "1",
+      "name": "sdf",
+      "location": "ffffffff",
+      "date": "2018-07-10T19:30",
+      "id": 10
     }
   ],
   "tasks": [
@@ -198,6 +236,139 @@
       "date": "2018-07-08T01:00",
       "completed": "true",
       "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 6
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 11
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 12
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 13
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 14
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 15
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 16
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 17
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 18
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 19
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 20
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 21
+    },
+    {
+      "userId": "1",
+      "task": "lkja;klja;lkjdf",
+      "date": "2018-07-13T01:25",
+      "completed": "false",
+      "id": 22
     }
   ]
 }

@@ -40,7 +40,7 @@
       "name": "Your Mom",
       "password": "milf",
       "email": "yourmom@thebomb.com",
-      "id":8
+      "id": 8
     },
     {
       "name": "newUser",
@@ -114,6 +114,21 @@
       "userId": "6",
       "yourId": "4",
       "id": 27
+    },
+    {
+      "userId": "1",
+      "yourId": "6",
+      "id": 28
+    },
+    {
+      "userId": "4",
+      "yourId": "6",
+      "id": 29
+    },
+    {
+      "userId": "2",
+      "yourId": "6",
+      "id": 30
     }
   ],
   "messages": [

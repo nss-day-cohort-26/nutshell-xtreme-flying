@@ -12,7 +12,7 @@ const friendList = Object.create({}, { // creates element to hold all of the fri
                 <input type="text" id="friend-user-name" name="friend-title" />
                 <button id='add-new-friend'>Add Friend</button>
             </div>
-            <button id='find-new-friend'>FindFriend</button>
+            <button id='find-new-friend'>Find Friend</button>
             <section id='friend-list'></section>`))
         }
     },

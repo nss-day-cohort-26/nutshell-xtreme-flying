@@ -3,6 +3,8 @@
 const $ = require("jquery");
 const ajax = require("./../ajaxCalls.js")
 const editMess = require("./editMessage")
+const scrollBottom = require("./scrollBottom")  
+// const currentUser = require("./currentUser")
 let currentUse = sessionStorage.getItem("User")
 
 
@@ -35,6 +37,7 @@ const submitMess = function () {
         }
         $("#message-input").val("")
         makeMess(message, currentUse);  
+        scrollBottom();
  
     })
 }

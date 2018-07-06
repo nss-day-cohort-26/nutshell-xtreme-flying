@@ -97,13 +97,23 @@
     },
     {
       "userId": "2",
-      "message": "This is the first message from me!",
+      "message": "You have a hairy Butt",
       "id": 7
     },
     {
-      "userId": "6",
-      "message": "THis is my for real first message",
+      "userId": "2",
+      "message": "hey friends!!!!",
       "id": 8
+    },
+    {
+      "userId": "1",
+      "message": "This is a new message from me.",
+      "id": 9
+    },
+    {
+      "userId": "6",
+      "message": "I would like to say something.",
+      "id": 10
     }
   ],
   "news": [

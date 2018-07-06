@@ -29,6 +29,12 @@
       "name": "Leah Gwin",
       "email": "leahgwin@gmail.com",
       "password": "password"
+    },
+    {
+      "name": "William",
+      "password": "pass",
+      "email": "wkkimball043@gmail.com",
+      "id": 6
     }
   ],
   "friends": [
@@ -91,8 +97,13 @@
     },
     {
       "userId": "2",
-      "message": "Hey",
+      "message": "This is the first message from me!",
       "id": 7
+    },
+    {
+      "userId": "6",
+      "message": "THis is my for real first message",
+      "id": 8
     }
   ],
   "news": [

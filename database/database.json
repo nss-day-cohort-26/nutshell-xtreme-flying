@@ -37,6 +37,11 @@
       "id": 6
     },
     {
+      "name": "harambe",
+      "password": "rip",
+      "email": "harambe@harambe.com",
+      "id": 7
+    },
       "name": "Your Mom",
       "password": "milf",
       "email": "yourmom@thebomb.com",
@@ -81,39 +86,34 @@
       "id": 19
     },
     {
-      "userId": "1",
-      "yourId": "4",
+      "userId": "4",
+      "yourId": "5",
       "id": 20
     },
     {
-      "userId": "5",
-      "yourId": "4",
+      "userId": "2",
+      "yourId": "5",
       "id": 21
     },
     {
-      "userId": "2",
-      "yourId": "4",
+      "userId": "6",
+      "yourId": "5",
       "id": 22
     },
     {
-      "userId": "6",
-      "yourId": "7",
+      "userId": "1",
+      "yourId": "5",
+      "id": 23
+    },
+    {
+      "userId": "3",
+      "yourId": "5",
       "id": 24
     },
     {
-      "userId": "1",
+      "userId": "5",
       "yourId": "7",
       "id": 25
-    },
-    {
-      "userId": "7",
-      "yourId": "4",
-      "id": 26
-    },
-    {
-      "userId": "6",
-      "yourId": "4",
-      "id": 27
     },
     {
       "userId": "4",
@@ -183,13 +183,18 @@
       "id": 10
     },
     {
-      "userId": "6",
-      "message": "I'm trying some crap out.",
+      "userId": "5",
+      "message": "hello pals",
+      "id": 11
+    },
+    {
+      "userId": "8",
+      "message": "hi it me",
       "id": 12
     },
     {
-      "userId": "6",
-      "message": "This",
+      "userId": "5",
+      "message": "this works!",
       "id": 13
     }
   ],
@@ -203,7 +208,6 @@
       "id": 3
     },
     {
-      "userId": "1",
       "title": "Flood at NSS",
       "url": "www.nss.com",
       "synopsis": "Flooding spotted on 07/06/2018",
@@ -257,22 +261,22 @@
     },
     {
       "userId": "1",
-      "name": "testin",
-      "location": "jaeogn",
+      "name": "hang with friends",
+      "location": "pizza place",
       "date": "2018-07-10T19:30",
       "id": 8
     },
     {
       "userId": "1",
       "name": "log event",
-      "location": "soemf",
+      "location": "now today",
       "date": "2018-07-10T19:30",
       "id": 9
     },
     {
       "userId": "1",
-      "name": "sdf",
-      "location": "ffffffff",
+      "name": "nutshell",
+      "location": "here",
       "date": "2018-07-10T19:30",
       "id": 10
     }
@@ -290,7 +294,28 @@
       "task": "friday test",
       "date": "2018-07-13T02:02",
       "completed": "true",
-      "id": 2
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "",
+      "date": "2018-07-13T01:46",
+      "completed": "false",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "task": "",
+      "date": "2018-07-13T01:46",
+      "completed": "false",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "task": "hello test",
+      "date": "2018-07-13T01:48",
+      "completed": "false",
+      "id": 6
     }
   ]
 }

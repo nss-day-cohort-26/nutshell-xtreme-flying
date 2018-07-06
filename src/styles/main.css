@@ -73,7 +73,7 @@ button .delete {
 
 #message-article {
     max-height: 500px;
-    overflow-y:scroll; 
+    overflow-y:scroll;
     position:"relative";
 
 }
@@ -296,6 +296,22 @@ span.psw {
   /* -------------------ALL THIS AT TOP------------------ */
 
 
+/* Events styling by Leah */
+.singleEvent {
+    border: black solid 1px;
+    margin: 1%;
+    border-radius: 1em;
+    width: 75%;
+    padding: 1.5%;
+}
+
+.btn-edit {
+    border-radius: 0.5em;
+}
+
+.btn-delete {
+    border-radius: 0.5em;
+}
 /* Task CSS */
 .task-main-edit {
     position: fixed;

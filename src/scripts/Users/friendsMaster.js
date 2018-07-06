@@ -11,8 +11,8 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
                 usersArray.forEach(userObject =>{
                     // console.log(userObject.id)
                     if(userObject.name.toLowerCase() === nameInputField) { //if the input value = a user name,
-                        ajax.postFriend(userObject.id, 1).then( // the friend is added to the friends array.
-                            friendList.createFriendListComponent(1) //reloads the dom, the number (second parameter) should be the current user ID
+                        ajax.postFriend(userObject.id, sessionStorage.getItem("User")).then( // the friend is added to the friends array.
+                            friendList.createFriendListComponent(sessionStorage.getItem("User")) //reloads the dom, the number (second parameter) should be the current user ID
                         )
                     }
                 })
@@ -23,7 +23,7 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
         value: function() {
             // console.log(Number(event.target.id)) //the delete button has an id of the friend's unique id
             ajax.delFriend(event.target.id).then((response)=>{ //makes an ajax call to remove the friend from the friend array.
-                friendList.createFriendListComponent(1) //reloads the dom
+                friendList.createFriendListComponent(sessionStorage.getItem("User")) //reloads the dom
             })
         }
     },
@@ -31,7 +31,7 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
     "buildFriends": {
         value: function() {
             friendList.createFriendsTemplate()
-            friendList.createFriendListComponent(1)
+            friendList.createFriendListComponent(sessionStorage.getItem("User"))
             $("#friends").on("click", ".deleteFriend", friendsMaster.deleteShittyFriends) //event listener for the delete button
             $("#add-new-friend").on("click", friendsMaster.addNewFriend) //event listener for adding a new friend button
             $("#find-your-friends").hide() //hides the find friend field.

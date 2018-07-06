@@ -96,7 +96,7 @@ buildSingleEvent() {
           </div>
         </div>
         `)
-        console.log("Test", editModal);
+        // console.log("Test", editModal); 
 
         $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
         });

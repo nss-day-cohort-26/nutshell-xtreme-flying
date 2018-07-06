@@ -53,7 +53,8 @@ const buildMessageArticle = function () {
                 
                 $("#message-box").append(mess)
                 let nameBtn = document.createElement("p") 
-                nameBtn.className = "nameBtn"  
+                nameBtn.className = "nameBtn";
+                nameBtn.attr("data-userId", ) 
                 nameBtn.textContent = `${response.name}:`    
                 mess.prepend(nameBtn)      
                 addMessFriend(nameBtn);

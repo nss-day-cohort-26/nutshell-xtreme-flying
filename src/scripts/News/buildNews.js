@@ -9,7 +9,7 @@ buildNews: {
         const $headText = $("<h1>").text("News").appendTo("#mainNewsSec");
         const $articleSec = $("<section>").attr("id", "articleSec").appendTo("#mainNewsSec");
         //Building DOM when add new article is clicked
-        const $addArticleButton = $("<button>").text("Add New").appendTo("#mainNewsSec").on("click", function(){
+        const $addArticleButton = $("<button>").text("Add New").addClass("btn btn-info").appendTo("#mainNewsSec").on("click", function(){
             const $titleLabel = $("<label>").text("Title:").appendTo("#mainNewsSec");
             const $titleInput = $("<input>").appendTo("#mainNewsSec");
             const $urlLabel = $("<label>").text("URL:").appendTo("#mainNewsSec");
@@ -18,7 +18,7 @@ buildNews: {
             const $descInput = $("<input>").appendTo("#mainNewsSec");
             //Need event handler to add to database and clear & reload DOM
             //When adding info into fields, click create and it puts it into the database and refreshes DOM
-            const $createButton = $("<button>").text("Create").appendTo("#mainNewsSec").click(function(){
+            const $createButton = $("<button>").text("Create").addClass("btn btn-info").appendTo("#mainNewsSec").click(function(){
                 const fullTime = events.getDate()
                 const currentUser = sessionStorage.getItem("User")
                 ajax.postNews(currentUser, $titleInput.val(), $urlInput.val(), $descInput.val(), fullTime)
@@ -53,7 +53,7 @@ buildNews: {
                             $creatorName.text(key.user.name);
                         }
                         //Delete button for deleting articles
-                        const $deleteButton = $("<button>").text("delete").appendTo($holderSec).click(function() {
+                        const $deleteButton = $("<button>").text("delete").addClass("btn-primary").appendTo($holderSec).click(function() {
                             // console.log(event.target.parentNode.id);
                             //Deleting from database then refreshing DOM
                             ajax.delNews(event.target.parentNode.id)

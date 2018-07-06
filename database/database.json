@@ -3,22 +3,32 @@
     {
       "id": 1,
       "name": "Jack Bob",
+      "password": "abc123",
       "email": "jack____bob@jACkbOb.co.r"
     },
     {
       "id": 2,
       "name": "UMMM ISthename",
+      "password": "abc123",
       "email": "magic_hamster@yahoo.com"
     },
     {
-      "id": 3,
-      "name": "Jenn",
-      "email": "jenniferlawson000@gmail.com"
+      "name": "Evan Lusky",
+      "password": "jfjfjf",
+      "email": "ewlusky@gmail.com",
+      "id": 3
     },
     {
       "id": 4,
+      "name": "Jenn",
+      "email": "jenniferlawson000@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
       "name": "Leah Gwin",
-      "email": "leahgwin@gmail.com"
+      "email": "leahgwin@gmail.com",
+      "password": "password"
     }
   ],
   "friends": [
@@ -39,11 +49,6 @@
     },
     {
       "userId": "4",
-      "yourId": "1",
-      "id": 14
-    },
-    {
-      "userId": "4",
       "yourId": "3",
       "id": 15
     },
@@ -56,6 +61,11 @@
       "userId": "3",
       "yourId": "1",
       "id": 18
+    },
+    {
+      "userId": "4",
+      "yourId": "1",
+      "id": 19
     }
   ],
   "messages": [
@@ -87,26 +97,26 @@
   ],
   "news": [
     {
-      "id": 1,
-      "userId": 2,
-      "url": "news.com/greatthing",
-      "title": "A Thing Happened Today",
-      "synopsis": "Stuff got done.",
-      "timestamp": "13:12 3/12/16"
-    },
-    {
       "id": 2,
       "userId": 1,
       "url": "babble.com/newsworthystuff",
       "title": "I'm Perd Hadley",
       "synopsis": "And this is my description",
       "timestamp": "04:01 6/31/14"
+    },
+    {
+      "userId": "1",
+      "title": "Log news test",
+      "url": "www.yahoo.com",
+      "synopsis": "log test",
+      "timestamp": "7/6/2018 11:27",
+      "id": 3
     }
   ],
   "events": [
     {
       "userId": "1",
-      "name": "yes it does",
+      "name": "yes it login edit 3",
       "location": "Nash Software School",
       "date": "2018-07-20T07:30",
       "id": 3
@@ -145,6 +155,13 @@
       "location": "jaeogn",
       "date": "2018-07-10T19:30",
       "id": 8
+    },
+    {
+      "userId": "1",
+      "name": "log event",
+      "location": "soemf",
+      "date": "2018-07-10T19:30",
+      "id": 9
     }
   ],
   "tasks": [
@@ -159,85 +176,15 @@
       "userId": "1",
       "task": "Edit",
       "date": "2018-07-07T19:30",
-      "completed": "true",
+      "completed": "false",
       "id": 2
     },
     {
       "userId": "1",
-      "task": "edit",
-      "date": "2018-07-06T09:05",
+      "task": "log tast",
+      "date": "2018-07-08T01:00",
       "completed": "true",
       "id": 3
-    },
-    {
-      "userId": "1",
-      "task": "create",
-      "date": "2018-07-12T09:05",
-      "completed": "true",
-      "id": 4
-    },
-    {
-      "userId": "1",
-      "task": "create second",
-      "date": "2018-07-12T09:58",
-      "completed": "true",
-      "id": 5
-    },
-    {
-      "userId": "1",
-      "task": "Finish that good good merge",
-      "date": "2018-07-12T11:07",
-      "completed": "true",
-      "id": 7
-    },
-    {
-      "userId": "1",
-      "task": "dfasdasdfasdf",
-      "date": "2018-07-12T11:10",
-      "completed": "true",
-      "id": 8
-    },
-    {
-      "userId": "1",
-      "task": "asdfasdf",
-      "date": "2018-07-12T11:13",
-      "completed": "false",
-      "id": 9
-    },
-    {
-      "userId": "1",
-      "task": "New taskl",
-      "date": "2018-07-12T11:56",
-      "completed": "true",
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "task": "Today I need to eat dinner",
-      "date": "2018-07-12T01:23",
-      "completed": "false",
-      "id": 11
-    },
-    {
-      "userId": "1",
-      "task": "Shave Butt Hair",
-      "date": "2018-07-12T02:11",
-      "completed": "true",
-      "id": 12
-    },
-    {
-      "userId": "1",
-      "task": "eat all the hot dogs",
-      "date": "2018-07-15T02:39",
-      "completed": "false",
-      "id": 13
-    },
-    {
-      "userId": "1",
-      "task": "testing",
-      "date": "2018-07-10T10:00",
-      "completed": "true",
-      "id": 14
     }
   ]
 }

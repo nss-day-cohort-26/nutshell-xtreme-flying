@@ -26,10 +26,20 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
                 friendList.createFriendListComponent(1) //reloads the dom
             })
         }
+    },
+
+    "buildFriends": {
+        value: function() {
+            friendList.createFriendsTemplate()
+            friendList.createFriendListComponent(1)
+            $("#friends").on("click", ".deleteFriend", friendsMaster.deleteShittyFriends) //event listener for the delete button
+            $("#add-new-friend").on("click", friendsMaster.addNewFriend) //event listener for adding a new friend button
+            $("#find-your-friends").hide() //hides the find friend field.
+            $("#find-new-friend").on("click", function(){$("#find-your-friends").toggle()}) // shows the find friend field on click
+
+        }
     }
+
 })
 
-$("#friends").on("click", ".deleteFriend", friendsMaster.deleteShittyFriends) //event listener for the delete button
-$("#add-new-friend").on("click", friendsMaster.addNewFriend) //event listener for adding a new friend button
-$("#find-your-friends").hide() //hides the find friend field.
-$("#find-new-friend").on("click", function(){$("#find-your-friends").toggle()}) // shows the find friend field on click
+module.exports = friendsMaster;

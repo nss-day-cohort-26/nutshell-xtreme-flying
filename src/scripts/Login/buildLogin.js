@@ -18,8 +18,8 @@ class buildLogin {
         loginDiv.append(`
         <button id="login-btn" class="logbut">Login</button>
         <button id="register-btn" class="logbut">Register</button>
-        
-    
+
+
 
     <div id="id01" class="login-modal">
 
@@ -60,7 +60,7 @@ class buildLogin {
                     <b>Name</b>
                 </label>
                 <input type="text" id="reg-name" placeholder="Enter Name" name="name" required>
-                
+
                 <label for="email">
                     <b>Email</b>
                 </label>
@@ -100,11 +100,17 @@ class buildLogin {
         const wholePage = $('#page');
         wholePage.append(`
         <button id="logreg">Log In</button>
-        <div id="events" class="features"></div>
-        <div id="messages" class="features"></div>
-        <div id="news" class="features"></div>
         <div id="tasks" class="features"></div>
-        <div id="friends" class="features"></div>
+        <section class="nutshell">
+          <section class="boxed">
+            <div id="events" class="features"></div>
+            <div id="news" class="features"></div>
+          </section>
+          <section class='column'>
+            <div id="messages" class="features"></div>
+            <div id="friends" class="features"></div>
+          </section>
+        </section>
         `)
         const logreg = $('#logreg');
         wholePage.on('click', '#logreg', () => {

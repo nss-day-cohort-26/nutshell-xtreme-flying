@@ -97,14 +97,6 @@
   ],
   "news": [
     {
-      "id": 2,
-      "userId": 1,
-      "url": "babble.com/newsworthystuff",
-      "title": "I'm Perd Hadley",
-      "synopsis": "And this is my description",
-      "timestamp": "04:01 6/31/14"
-    },
-    {
       "userId": "1",
       "title": "Log news test",
       "url": "www.yahoo.com",

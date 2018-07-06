@@ -40,9 +40,11 @@ li {
 #messages {
    margin: 1%;
    display: flex;
-   height: 25%;
-   width: 25%;
+   height: 35%;
+   width: 35%;
 }
+
+
 
 #message-article {
     max-height: 500px;
@@ -50,6 +52,11 @@ li {
     position:"relative";
 
 }
+
+.message textarea { 
+    /* resize: vertical;       */
+    max-width: 100%       
+} 
 
 #input-div{
     /* position: absolute; */
@@ -97,6 +104,15 @@ textarea {
     overflow: auto;
     display: flex;
     flex-direction: column-reverse; */
+}
+
+.edit-btn { 
+    border-radius: 30px; 
+    font-size: .5em;
+}
+.edit-submit-btn {
+    border-radius: 30px; 
+    font-size: .5em; 
 }
 
 /* Task CSS */

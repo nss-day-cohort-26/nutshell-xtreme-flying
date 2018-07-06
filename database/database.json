@@ -95,29 +95,9 @@
       "id": 8
     },
     {
-      "userId": "2",
-      "message": "  astthyu",
+      "userId": "1",
+      "message": "This is a new message from me.",
       "id": 9
-    },
-    {
-      "userId": "1",
-      "message": "sadfasfd",
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "message": "dfadf",
-      "id": 11
-    },
-    {
-      "userId": "1",
-      "message": "sdfsd",
-      "id": 12
-    },
-    {
-      "userId": "1",
-      "message": "asdfdfdf",
-      "id": 13
     }
   ],
   "news": [

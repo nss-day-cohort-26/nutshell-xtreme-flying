@@ -33,7 +33,7 @@ buildNews: {
                     ajax.allFriends()
                     .then(friendsList => {
                         friendsList.push(sessionStorage.getItem("User"));
-                        console.log("friendslist", friendsList);   
+                        // console.log("friendslist", friendsList);
                     //This is sorting each article by newest first
                     item.sort(function(a,b){
                         return new Date(b.timestamp) - new Date(a.timestamp);
@@ -46,7 +46,12 @@ buildNews: {
                         const $url = $("<p>").text(`Source: ${key.url}`).appendTo($holderSec);
                         const $desc = $("<p>").text(`Description: ${key.synopsis}`).appendTo($holderSec);
                         const $timestamp = $("<p>").text(key.timestamp).appendTo($holderSec);
-                        const $creatorName = $("<p>").text(key.user.name).appendTo($holderSec);
+                        const $creatorName = $("<p>").appendTo($holderSec);
+                        if(key.userId === sessionStorage.getItem("User")){
+                            $creatorName.text("You");
+                        }else {
+                            $creatorName.text(key.user.name);
+                        }
                         //Delete button for deleting articles
                         const $deleteButton = $("<button>").text("delete").appendTo($holderSec).click(function() {
                             // console.log(event.target.parentNode.id);
@@ -55,7 +60,6 @@ buildNews: {
                             .then(item => {
                             newsDomMethods.clearDom();
                         })
-                    
                         });
                         $holderSec.appendTo("#articleSec");
                     }
@@ -75,7 +79,7 @@ clearDom: {
     }
 }
 })
-newsDomMethods.buildNews();
+// newsDomMethods.buildNews();
 
 module.exports = newsDomMethods;
 

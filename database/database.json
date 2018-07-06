@@ -40,7 +40,7 @@
       "name": "Your Mom",
       "password": "milf",
       "email": "yourmom@thebomb.com",
-      "id":8
+      "id": 8
     },
     {
       "name": "newUser",
@@ -81,11 +81,6 @@
       "id": 19
     },
     {
-      "userId": "1",
-      "yourId": "4",
-      "id": 20
-    },
-    {
       "userId": "5",
       "yourId": "4",
       "id": 21
@@ -104,11 +99,6 @@
       "userId": "1",
       "yourId": "7",
       "id": 25
-    },
-    {
-      "userId": "7",
-      "yourId": "4",
-      "id": 26
     },
     {
       "userId": "6",
@@ -171,6 +161,11 @@
       "userId": "6",
       "message": "This",
       "id": 13
+    },
+    {
+      "userId": "4",
+      "message": "HI",
+      "id": 14
     }
   ],
   "news": [
@@ -181,14 +176,6 @@
       "synopsis": "log test",
       "timestamp": "7/6/2018 11:27",
       "id": 3
-    },
-    {
-      "userId": "1",
-      "title": "Flood at NSS",
-      "url": "www.nss.com",
-      "synopsis": "Flooding spotted on 07/06/2018",
-      "timestamp": "7/6/2018 13:25",
-      "id": 4
     }
   ],
   "events": [

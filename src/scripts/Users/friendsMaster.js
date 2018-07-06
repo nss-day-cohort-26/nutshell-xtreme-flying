@@ -26,10 +26,16 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
                 friendList.createFriendListComponent(1) //reloads the dom
             })
         }
+    },
+    "callThisToBuildTheDom": {
+        value: function() {
+            $("#friends").on("click", ".deleteFriend", friendsMaster.deleteShittyFriends) //event listener for the delete button
+            $("#add-new-friend").on("click", friendsMaster.addNewFriend) //event listener for adding a new friend button
+            $("#find-your-friends").hide() //hides the find friend field.
+            $("#find-new-friend").on("click", function(){$("#find-your-friends").toggle()}) // shows the find friend field on click
+            friendList.createFriendsTemplate()
+            friendList.createFriendListComponent(1) // hard coded "yourId", will need to be changed with login feature
+        }
     }
 })
 
-$("#friends").on("click", ".deleteFriend", friendsMaster.deleteShittyFriends) //event listener for the delete button
-$("#add-new-friend").on("click", friendsMaster.addNewFriend) //event listener for adding a new friend button
-$("#find-your-friends").hide() //hides the find friend field.
-$("#find-new-friend").on("click", function(){$("#find-your-friends").toggle()}) // shows the find friend field on click

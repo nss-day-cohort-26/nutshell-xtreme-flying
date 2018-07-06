@@ -29,6 +29,12 @@
       "name": "Leah Gwin",
       "email": "leahgwin@gmail.com",
       "password": "password"
+    },
+    {
+      "name": "William",
+      "password": "pass",
+      "email": "wkkimball043@gmail.com",
+      "id": 6
     }
   ],
   "friends": [

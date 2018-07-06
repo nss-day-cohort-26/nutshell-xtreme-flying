@@ -5,12 +5,30 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .features {
     border: 1px solid black;
+    margin: 15px;
+}
+
+.nutshell {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.boxed {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Friend List Coded by Jenn*/
 #friends {
-    width: 25%;
+    width: 90%;
     padding-left: 30px;
+    height: auto;
 }
 
 #friends h1 {
@@ -37,16 +55,18 @@ li {
     display: inline-block;
 }
 
-.delete {
+button .delete {
     display: inline-block;
+    width: 20px;
 }
 
 /* Messages Styles */
 #messages {
    margin: 1%;
    display: flex;
-   height: 35%;
-   width: 35%;
+   height: auto;
+   width: 90%;
+   display: flex;
 }
 
 
@@ -55,17 +75,17 @@ li {
     max-height: 500px;
     overflow-y:scroll;
     position:"relative";
-    
+
 }
 
-.nameBtn {  
-    display: inline; 
+.nameBtn {
+    display: inline;
     text-decoration: underline;
 }
-.message textarea { 
+.message textarea {
     /* resize: vertical;       */
-    max-width: 100%       
-} 
+    max-width: 100%
+}
 
 #input-div{
     /* position: absolute; */
@@ -115,13 +135,13 @@ textarea {
     flex-direction: column-reverse; */
 }
 
-.edit-btn { 
-    border-radius: 30px; 
+.edit-btn {
+    border-radius: 30px;
     font-size: .5em;
 }
 .edit-submit-btn {
-    border-radius: 30px; 
-    font-size: .5em; 
+    border-radius: 30px;
+    font-size: .5em;
 }
 
 /* Task CSS */
@@ -133,8 +153,27 @@ textarea {
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
     z-index: 10;
-    
+
 }
+#tasks {
+    display: inline-block;
+    width: 65%;
+}
+
+/* news */
+
+#news {
+    width: 400px;
+    height: auto;
+}
+
+/* Events */
+
+#events {
+    width: 400px;
+    height: auto;
+}
+
 /* Login CSS */
 
 
@@ -156,7 +195,7 @@ input[type=text], input[type=password] {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: auto;
 }
 
 button:hover {
@@ -226,12 +265,12 @@ span.psw {
 }
 
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
+    from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
 }
-    
+
 @keyframes animatezoom {
-    from {transform: scale(0)} 
+    from {transform: scale(0)}
     to {transform: scale(1)}
 }
 
@@ -254,6 +293,7 @@ span.psw {
 }
 #logreg {
     width: 20%;
+    display: inline-block;
 }
 .centered {
     display: flex;

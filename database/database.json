@@ -49,11 +49,6 @@
       "yourId": 3
     },
     {
-      "userId": "1",
-      "yourId": "1",
-      "id": 11
-    },
-    {
       "userId": "4",
       "yourId": "3",
       "id": 15
@@ -87,7 +82,7 @@
     },
     {
       "userId": "2",
-      "message": " THis is another test of this",
+      "message": "Hey this works!",
       "id": 4
     },
     {
@@ -112,14 +107,6 @@
     }
   ],
   "news": [
-    {
-      "id": 2,
-      "userId": 1,
-      "url": "babble.com/newsworthystuff",
-      "title": "I'm Perd Hadley",
-      "synopsis": "And this is my description",
-      "timestamp": "04:01 6/31/14"
-    },
     {
       "userId": "1",
       "title": "Log news test",

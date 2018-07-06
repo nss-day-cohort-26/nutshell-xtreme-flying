@@ -38,9 +38,9 @@ const buildMessageArticle = function () {
             ajax.getUser(element.userId).then(function (response) {
 
                 let userName = response.name
-                mess.textContent = `${element.message}` 
+                mess.textContent = ` ${element.message}` 
                 let currentUse = sessionStorage.getItem("User")
-                console.log(currentUse) 
+                // console.log(currentUse) 
                 if (element.userId == currentUse) {
                     mess.classList = `message`
                     // mess.id = `${response.id}`
@@ -59,7 +59,7 @@ const buildMessageArticle = function () {
                 $("#message-box").append(mess)
                 let nameBtn = document.createElement("p") 
                 nameBtn.className = "nameBtn"  
-                nameBtn.textContent = `${response.name}: `    
+                nameBtn.textContent = `${response.name}:`    
                 mess.prepend(nameBtn)      
                 addMessFriend(nameBtn);
  

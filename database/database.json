@@ -135,6 +135,16 @@
       "userId": "7",
       "message": "This is a message from the new user!",
       "id": 11
+    },
+    {
+      "userId": "6",
+      "message": "I'm trying some crap out.",
+      "id": 12
+    },
+    {
+      "userId": "6",
+      "message": "This",
+      "id": 13
     }
   ],
   "news": [

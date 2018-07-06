@@ -5,6 +5,18 @@ class ajaxCalls {
         return $.ajax(`http://localhost:3000/${resource}`)
     }
 
+    postUser(name, password, email) {
+        return $.ajax({
+            url: "http://localhost:3000/users",
+            method: "POST",
+            data: {
+                "name": name,
+                "password": password,
+                "email": email
+            }
+        })
+    }
+
     getUser(userId) {
         return $.ajax(`http://localhost:3000/users/${userId}`)
     }

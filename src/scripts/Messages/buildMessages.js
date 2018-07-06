@@ -4,6 +4,7 @@ const $ = require("jquery")
 const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
+const addMessFriend = require("./addFriendMessage")
 // const currentUser = require("./currentUser")
 let currentUse = 2;//dont let this stay
 
@@ -35,8 +36,9 @@ const buildMessageArticle = function () {
             
             //this ajax call gets the userId of the message, which is used to give proper ids to the elements, and will be used to check for current user later on.
             ajax.getUser(element.userId).then(function (response) {
-                mess.textContent = `${response.name}: ${element.message}`
+
                 let userName = response.name
+                mess.textContent = `${element.message}` 
                 if (element.userId == currentUse) {
                     mess.classList = `message`
                     // mess.id = `${response.id}`
@@ -48,10 +50,17 @@ const buildMessageArticle = function () {
                 }
                 mess.id = `${element.id}`
                 
-                $("#message-box").append(mess)
                 const scrollBottom = require("./scrollBottom") 
                 scrollBottom();
 
+                
+                $("#message-box").append(mess)
+                let nameBtn = document.createElement("p") 
+                nameBtn.className = "nameBtn"  
+                nameBtn.textContent = `${response.name}:`    
+                mess.prepend(nameBtn)      
+                addMessFriend(nameBtn);
+ 
             })
         }
         )

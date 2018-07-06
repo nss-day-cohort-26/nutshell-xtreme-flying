@@ -32,7 +32,7 @@ function taskAll() {
         const targetTask = $(`#${e.target.id}.task-card`)
         // console.log(targetTask)
         targetTask.hide()
-        AJ.putTask(1, targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // USERID USED HERE
+        AJ.putTask(sessionStorage.getItem("User"), targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // USERID USED HERE
     }
     taskDiv.on('click', ".task-complete-btn", completed)
     //----------------------------
@@ -42,7 +42,7 @@ function taskAll() {
         const title = $('#task-title');
         const date = $('#task-time');
         // console.log('make task', title.val(), date.val()) // USERID USED HERE
-        AJ.postTask(1, title.val(), false, date.val())
+        AJ.postTask(sessionStorage.getItem("User"), title.val(), false, date.val())
             .then(bTasks.taskPopulate())
     }
 
@@ -58,7 +58,7 @@ function taskAll() {
         const date = $('#task-edit-time');
         // console.log(id);
         // console.log(targetTask) // USERID USED HERE
-        AJ.putTask(1, title.val(), 'false', date.val(), passId)
+        AJ.putTask(sessionStorage.getItem("User"), title.val(), 'false', date.val(), passId)
             .then(bTasks.taskPopulate)
     }
 

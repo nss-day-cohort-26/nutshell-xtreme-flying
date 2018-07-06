@@ -54,7 +54,7 @@ class buildEventSection {
     }
 //this method is what makes events in the event-holder div
 buildSingleEvent() {
-    ajax.getField('events').then((eventsArray) =>  { //this ajax call needs to expand for current user.. that's the next step for this
+    return ajax.getField('events').then((eventsArray) =>  { //this ajax call needs to expand for current user.. that's the next step for this
         $("#events-holder").empty();
         //this is writing to the DOM each event as well as the editing button
         eventsArray.forEach(eventObject => {
@@ -96,10 +96,14 @@ buildSingleEvent() {
           </div>
         </div>
         `)
-        // console.log("Test", editModal); 
+
 
         $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
         });
+        $("#events").on("click", ".btn-edit", editEvent)
+        $("#saveEventButton").on("click", addNewEvent)
+
+
     })
 }
 
@@ -108,7 +112,29 @@ buildSingleEvent() {
 
 
 const makeAnEvent = new buildEventSection;
-makeAnEvent.buildEventCreateSection();
-makeAnEvent.buildSingleEvent();
+// makeAnEvent.buildEventCreateSection();
+// makeAnEvent.buildSingleEvent();
+
+function editEvent() {
+    console.log("edit event", event.target.id);
+
+    ajax.getField(`events/${event.target.id}`).then((eventInfo) => {
+        console.log("INFO", eventInfo.name);
+        $(`#editEventInput${eventInfo.id}`).val(eventInfo.name);
+        $(`#editEventLocation${eventInfo.id}`).val(eventInfo.location);
+        $(`#editEventParty-time${eventInfo.id}`).val(eventInfo.date);
+    })
+}
+
+function addNewEvent() {
+    console.log('addNewEvent');
+    let name = document.getElementById("eventInput").value;
+    let loc = document.getElementById("location").value;
+    let dateTime = document.getElementById("party-time").value;
+    let user = 1; // this is going to be obtained with session storage I believe
+    ajax.postEvent(user, name, loc, dateTime).then(
+        makeAnEvent.buildSingleEvent());
+}
+
 
 module.exports = makeAnEvent;

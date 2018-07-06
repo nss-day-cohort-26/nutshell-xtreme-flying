@@ -5,6 +5,7 @@ const makeAnEvent = require("./buildEvents")
 class eventMaster {
     //adds a new event and posts it to JSON
     addNewEvent() {
+        console.log('addNewEvent');
         let name = document.getElementById("eventInput").value;
         let loc = document.getElementById("location").value;
         let dateTime = document.getElementById("party-time").value;
@@ -14,7 +15,7 @@ class eventMaster {
     }
 
     editEvent() {
-console.log(event.target.id);
+        console.log("edit event", event.target.id);
 
         ajax.getField(`events/${event.target.id}`).then((eventInfo) => {
             console.log("INFO", eventInfo.name);
@@ -39,13 +40,23 @@ console.log(event.target.id);
 
     }
 
+    buildEvents() {
+        makeAnEvent.buildEventCreateSection();
+        makeAnEvent.buildSingleEvent()
+            
+        $("#editEventModal").on("click", "#editEventButton", eventFunctions.saveEditedEvent)
+        // //save button
+        // $("#saveEventButton").on("click", eventMaster.addNewEvent)
+        //actual edit button
+        // console.log('is events', $('#events'));
+        // $("#events").on("click", ".btn-edit", eventMaster.editEvent)
+
+
+    }
+
 
 }
 
 const eventFunctions = new eventMaster;
-//save edit button
-$("#editEventModal").on("click", "#editEventButton", eventFunctions.saveEditedEvent)
-//save button
-$("#saveEventButton").on("click", eventFunctions.addNewEvent)
-//actual edit button
-$("#events").on("click", ".btn-edit", eventFunctions.editEvent)
+
+module.exports = eventFunctions;

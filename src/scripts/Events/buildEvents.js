@@ -60,11 +60,12 @@ buildSingleEvent() {
         eventsArray.forEach(eventObject => {
             //appends to the event holder
             $("#events-holder").append($(`
-                <section class = "${eventObject.userId}" id = "${eventObject.id}">
+                <section class = "'${eventObject.userId}' singleEvent" id = "${eventObject.id}">
                     <div id="name">${eventObject.name}</div>
                     <div id="location">${eventObject.location}</div>
                     <div id="date">${eventObject.date}</div>
                     <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#modal${eventObject.id}">Edit</button>
+                    <button type="button" class="btn-delete btn-secondary" id ="${eventObject.id}"">Delete Event</button>
                 </section>`))
                 //this is the editing modal that opens when the edit button is clicked... this loads on page load
                 let editModal = $(`
@@ -125,6 +126,7 @@ function editEvent() {
         $(`#editEventParty-time${eventInfo.id}`).val(eventInfo.date);
     })
 }
+
 
 function addNewEvent() {
     console.log('addNewEvent');

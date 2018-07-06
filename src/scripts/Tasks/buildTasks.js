@@ -53,7 +53,7 @@ class buildTask {
                     // console.log('taskPopulate-thing', thing.completed);
                     const User = sessionStorage.getItem("User");
                     
-                    if (thing.completed == "false" && thing.userID == User) {
+                    if (thing.completed == "false" && thing.userId == User) {
                         // console.log(thing);
                         const dueDate = (new Date(thing.date) - Date.now());
                         const diff = new moment.duration(dueDate);

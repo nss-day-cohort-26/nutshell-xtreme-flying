@@ -39,6 +39,7 @@ function taskAll() {
 
     //-------------Submit Button
     function makeTask(e) {
+        console.log("makeTask");
         const title = $('#task-title');
         const date = $('#task-time');
         // console.log('make task', title.val(), date.val()) // USERID USED HERE

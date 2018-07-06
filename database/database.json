@@ -179,25 +179,18 @@
   ],
   "tasks": [
     {
-      "userId": "1",
-      "task": "New task",
-      "date": "2018-07-03T19:30",
-      "completed": "true",
+      "userId": "3",
+      "task": "ewlusky 31",
+      "date": "2018-07-13T01:51",
+      "completed": "false",
       "id": 1
     },
     {
-      "userId": "1",
-      "task": "Edit",
-      "date": "2018-07-07T19:30",
-      "completed": "false",
-      "id": 2
-    },
-    {
-      "userId": "1",
-      "task": "log tast",
-      "date": "2018-07-08T01:00",
+      "userId": "3",
+      "task": "friday test",
+      "date": "2018-07-13T02:02",
       "completed": "true",
-      "id": 3
+      "id": 2
     }
   ]
 }

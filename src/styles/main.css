@@ -1,6 +1,9 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
-
+@font-face {
+    font-family: Chalk;
+    src: url(EraserDust.ttf);
+}
 
 
 .features {
@@ -303,7 +306,58 @@ span.psw {
 
 }
 
-#task-main fieldset { 
+.task-card-time {
+    margin: 0;
+}
+
+.task-card {
+    font-size: 1.3em;
+}
+
+#task-time input{
+    background-image: inherit;
+    border: none;
+    color: white;
+    margin: 0;
+}
+
+#task-time{
+    background-image: inherit;
+    border: none;
+    color: white;
+    margin: 0;
+}
+
+
+.task-complete-btn {
+  display: inline-block;
+  background: url(checkbox.jpg) no-repeat;
+  background-size: 100%;
+  width: 20px; /* Width of new image */
+  height: 20px; /* Height of new image */
+  padding-left: 0;
+  border: none;
+}
+
+#task-mains {
+    background-image: url("https://pre00.deviantart.net/647c/th/pre/i/2015/010/0/3/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    color: #e0dbd1;
+    font-family: Chalk;
+    position: fixed;
+    margin: auto;
+    width: 66%;
+    z-index: 9;
+    min-height: 50%;
+}
+
+#to-do {
+    font-size: 1.6em;
+    margin: 0;
+}
+
+/* #task-main fieldset { 
         display: block;
         margin-left: 2px;
         margin-right: 2px;
@@ -320,7 +374,7 @@ span.psw {
         padding-right: 2px;
         border: none;
         width: auto;
-    }
+    } */
 
 #tasks {
     display: inline-block;

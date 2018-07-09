@@ -47,6 +47,12 @@
       "password": "password",
       "email": "user@this.com",
       "id": 7
+    },
+    {
+      "name": "Kimberly Kimball",
+      "password": "asdf",
+      "email": "kim@kim.com",
+      "id": 9
     }
   ],
   "friends": [
@@ -91,9 +97,14 @@
       "id": 25
     },
     {
-      "userId": "4",
-      "yourId": "6",
-      "id": 29
+      "userId": "7",
+      "yourId": "4",
+      "id": 26
+    },
+    {
+      "userId": "6",
+      "yourId": "4",
+      "id": 27
     },
     {
       "userId": "2",
@@ -109,36 +120,6 @@
       "userId": "1",
       "yourId": "6",
       "id": 32
-    },
-    {
-      "userId": "6",
-      "yourId": "8",
-      "id": 38
-    },
-    {
-      "userId": "1",
-      "yourId": "8",
-      "id": 39
-    },
-    {
-      "userId": "4",
-      "yourId": "8",
-      "id": 40
-    },
-    {
-      "userId": "1",
-      "yourId": "4",
-      "id": 41
-    },
-    {
-      "userId": "2",
-      "yourId": "4",
-      "id": 42
-    },
-    {
-      "userId": "4",
-      "yourId": "4",
-      "id": 43
     },
     {
       "userId": "8",
@@ -206,26 +187,6 @@
       "userId": "4",
       "message": "Hello everyone",
       "id": 10
-    },
-    {
-      "userId": "6",
-      "message": "I'm trying some crap out.",
-      "id": 12
-    },
-    {
-      "userId": "6",
-      "message": "This",
-      "id": 13
-    },
-    {
-      "userId": "4",
-      "message": "HI",
-      "id": 14
-    },
-    {
-      "userId": "3",
-      "message": "sup",
-      "id": 15
     }
   ],
   "news": [
@@ -254,11 +215,11 @@
       "id": 5
     },
     {
-      "userId": "3",
-      "title": "test",
-      "url": "test",
-      "synopsis": "test",
-      "timestamp": "7/2/2018 12:57",
+      "userId": "9",
+      "title": "Mom and dad came home",
+      "url": "www.kimbolia.com",
+      "synopsis": "Stuff",
+      "timestamp": "7/6/2018 18:51",
       "id": 6
     }
   ],
@@ -285,11 +246,11 @@
       "id": 9
     },
     {
-      "userId": "4",
-      "name": "hey",
-      "location": "whats up",
-      "date": "2018-07-10T19:30",
-      "id": 10
+      "userId": "1",
+      "name": "Go to bed at the correct time.",
+      "location": "Home",
+      "date": "2018-07-10T20:30",
+      "id": 11
     }
   ],
   "tasks": [
@@ -298,14 +259,140 @@
       "task": "new task",
       "date": "2018-07-16T09:22",
       "completed": "true",
-      "id": 1
+      "id": 2
     },
     {
-      "userId": "3",
-      "task": "test task",
-      "date": "2018-07-16T12:47",
+      "userId": "6",
+      "task": "This ",
+      "date": "2018-07-13T03:15",
       "completed": "false",
-      "id": 2
+      "id": 3
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 4
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 5
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 6
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 7
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 8
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 9
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 10
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 11
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 12
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 13
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 14
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 15
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 16
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 17
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 18
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 19
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 20
+    },
+    {
+      "userId": "6",
+      "task": "",
+      "date": "2018-07-13T06:52",
+      "completed": "false",
+      "id": 21
     }
   ]
 }

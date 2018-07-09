@@ -24,8 +24,24 @@ const buildMessageArticle = function () {
 
     $("#messages").append($messageArticle)
 
+    var previous = null;
+    var current = null;
+    setInterval(function () {
+        $.getJSON("http://localhost:3000/messages", function (json) {   
+            current = JSON.stringify(json);
+            if (previous && current && previous !== current) {
+                console.log('refresh');
+                $("#messages").empty();  
+                buildMessageArticle(); 
+            }
+            previous = current;
+        });
+    }, 2000);  
+
     //this calls the function that adds the event listener to the submit button
     subMess();
+
+   
 
     //this executes an ajax call to the api for all of the messages, and then builds message components with an edit function for each.
     ajax.getField("messages").then(function (messageList) {
@@ -63,7 +79,7 @@ const buildMessageArticle = function () {
                 let nameBtn = document.createElement("p")
                 nameBtn.className = "nameBtn"
                 nameBtn.id = `${response.id}`
-                nameBtn.textContent = `${response.name}: `
+                nameBtn.textContent = `${response.name}:`
                 mess.prepend(nameBtn)
                 addMessFriend(nameBtn);
 

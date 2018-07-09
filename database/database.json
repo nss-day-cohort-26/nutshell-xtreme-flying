@@ -35,6 +35,18 @@
       "password": "pass",
       "email": "wkkimball043@gmail.com",
       "id": 6
+    },
+    {
+      "name": "Your Mom",
+      "password": "milf",
+      "email": "yourmom@thebomb.com",
+      "id": 8
+    },
+    {
+      "name": "newUser",
+      "password": "password",
+      "email": "user@this.com",
+      "id": 7
     }
   ],
   "friends": [
@@ -67,6 +79,61 @@
       "userId": "4",
       "yourId": "1",
       "id": 19
+    },
+    {
+      "userId": "1",
+      "yourId": "4",
+      "id": 20
+    },
+    {
+      "userId": "5",
+      "yourId": "4",
+      "id": 21
+    },
+    {
+      "userId": "2",
+      "yourId": "4",
+      "id": 22
+    },
+    {
+      "userId": "6",
+      "yourId": "7",
+      "id": 24
+    },
+    {
+      "userId": "1",
+      "yourId": "7",
+      "id": 25
+    },
+    {
+      "userId": "7",
+      "yourId": "4",
+      "id": 26
+    },
+    {
+      "userId": "6",
+      "yourId": "4",
+      "id": 27
+    },
+    {
+      "userId": "4",
+      "yourId": "6",
+      "id": 29
+    },
+    {
+      "userId": "2",
+      "yourId": "6",
+      "id": 30
+    },
+    {
+      "userId": "8",
+      "yourId": "6",
+      "id": 31
+    },
+    {
+      "userId": "1",
+      "yourId": "6",
+      "id": 32
     }
   ],
   "messages": [
@@ -97,23 +164,33 @@
     },
     {
       "userId": "2",
-      "message": "You have a hairy Butt",
+      "message": "This is the first message from me!",
       "id": 7
     },
     {
-      "userId": "2",
-      "message": "hey friends!!!!",
+      "userId": "6",
+      "message": "THis is my for real first message",
       "id": 8
     },
     {
-      "userId": "1",
-      "message": "This is a new message from me.",
+      "userId": "4",
+      "message": "Hey you guys!",
       "id": 9
     },
     {
-      "userId": "6",
-      "message": "I would like to say something.",
+      "userId": "4",
+      "message": "Hello everyone",
       "id": 10
+    },
+    {
+      "userId": "6",
+      "message": "I'm trying some crap out.",
+      "id": 12
+    },
+    {
+      "userId": "6",
+      "message": "This",
+      "id": 13
     }
   ],
   "news": [
@@ -124,6 +201,22 @@
       "synopsis": "log test",
       "timestamp": "7/6/2018 11:27",
       "id": 3
+    },
+    {
+      "userId": "1",
+      "title": "Flood at NSS",
+      "url": "www.nss.com",
+      "synopsis": "Flooding spotted on 07/06/2018",
+      "timestamp": "7/6/2018 13:25",
+      "id": 4
+    },
+    {
+      "userId": "8",
+      "title": "Ur Mom dissed me",
+      "url": "www.nss.com",
+      "synopsis": "YourMomon 07/06/2018",
+      "timestamp": "7/6/2018 13:25",
+      "id": 5
     }
   ],
   "events": [
@@ -176,62 +269,7 @@
       "date": "2018-07-10T19:30",
       "id": 9
     },
-    {
-      "userId": "4",
-      "name": "test event",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "name": "test event",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 11
-    },
-    {
-      "userId": "1",
-      "name": "test event",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 12
-    },
-    {
-      "userId": "1",
-      "name": "test event",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 13
-    },
-    {
-      "userId": "1",
-      "name": "test event",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 14
-    },
-    {
-      "userId": "1",
-      "name": "test event",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 15
-    },
-    {
-      "userId": "1",
-      "name": "fdadsaf",
-      "location": "dsaf",
-      "date": "2018-07-10T19:30",
-      "id": 16
-    },
-    {
-      "userId": "3",
-      "name": "new thing edit 2",
-      "location": "here",
-      "date": "2018-07-10T19:30",
-      "id": 17
-    }
+        
   ],
   "tasks": [
     {

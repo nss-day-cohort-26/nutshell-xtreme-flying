@@ -110,6 +110,8 @@ class buildEventSection {
                         }
                         $(`.${sessionStorage.getItem("User")}`).removeClass("italics")
                         $('.btn-delete').hide()
+                        $(".btn-edit").hide()
+                        $(`.${sessionStorage.getItem("User")} button:first-of-type`).show()
                         $(`.${sessionStorage.getItem("User")} button:last-child`).show()
                         $("#events-holder section:first-child").addClass("bold-and-cornsilk")
 

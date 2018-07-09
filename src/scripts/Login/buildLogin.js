@@ -120,7 +120,6 @@ class buildLogin {
         })
         taskAll();
         buildMessages(AJ.getField("messages"));
-    
         buildNews.buildNews();
         buildFriends.buildFriends();
         buildEvents.buildEvents();

@@ -187,56 +187,6 @@
       "userId": "4",
       "message": "Hello everyone",
       "id": 10
-    },
-    {
-      "userId": "6",
-      "message": "I'm trying some crap out.",
-      "id": 12
-    },
-    {
-      "userId": "6",
-      "message": "This is a weird issue.",
-      "id": 13
-    },
-    {
-      "userId": "7",
-      "message": "More testing!",
-      "id": 14
-    },
-    {
-      "userId": "7",
-      "message": " Take 5",
-      "id": 15
-    },
-    {
-      "userId": "7",
-      "message": "More testing!",
-      "id": 16
-    },
-    {
-      "userId": "6",
-      "message": "And I think it works, even if it's not pretty!",
-      "id": 17
-    },
-    {
-      "userId": "7",
-      "message": "Now, this is working",
-      "id": 18
-    },
-    {
-      "userId": "6",
-      "message": "Once more unto the bugs",
-      "id": 19
-    },
-    {
-      "userId": "7",
-      "message": "Ok, now has the kraken gone away?",
-      "id": 20
-    },
-    {
-      "userId": "6",
-      "message": "MOre stuff",
-      "id": 21
     }
   ],
   "news": [

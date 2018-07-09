@@ -9,9 +9,6 @@ const eventHandlers = Object.create({}, {
             const hours = a.getHours();
             const minutes = a.getMinutes();
             let fullTime = `${month}/${day}/${year} ${hours}:${minutes}`;
-            if(minutes < 10){
-                fullTime = `${month}/${day}/${year} ${hours}:0${minutes}`;
-            }
             return fullTime;
         }
     }

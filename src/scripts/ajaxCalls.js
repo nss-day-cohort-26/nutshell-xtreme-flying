@@ -87,6 +87,13 @@ class ajaxCalls {
         })
     }
 
+    delEvent(id) {
+        return $.ajax({
+            url: `http://localhost:3000/events/${id}`,
+            method: "DELETE"
+        })
+    }
+
     postNews(user, title, url, syn, time) {
         return $.ajax({
             url: "http://localhost:3000/news",
@@ -109,6 +116,8 @@ class ajaxCalls {
     }
 
     postTask(user, task, done, date) {
+        console.log("post Task");
+        $('#task-title').text('...');
         return $.ajax({
             url: "http://localhost:3000/tasks",
             method: "POST",

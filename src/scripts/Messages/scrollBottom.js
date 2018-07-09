@@ -5,7 +5,7 @@ const scrollBottom = function () {
     scrollHeight = scrollHeight + 500
     // console.log(typeof scrollHeight)       
     $("#message-article").scrollTop(999999999);           
-    // console.log(typeof $("#message-article").scrollTop())             
+
 } 
 scrollBottom();    
 module.exports = scrollBottom; 

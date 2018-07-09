@@ -436,3 +436,20 @@ textarea {
     animation-fill-mode: forwards;
   }
     /* ------------------------------- */
+
+    /* Events styling by Leah */
+#events-holder > section {
+        border: black solid 1px;
+        margin: 1%;
+        border-radius: 1em;
+        width: 75%;
+        padding: 1.5%;
+    }
+
+.btn-edit {
+        border-radius: 0.5em;
+    }
+
+.btn-delete {
+        border-radius: 0.5em;
+    }

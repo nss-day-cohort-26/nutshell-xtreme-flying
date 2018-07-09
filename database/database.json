@@ -13,7 +13,13 @@
       "id": 2
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "userId": "1",
+      "yourId": "2",
+      "id": 1
+    }
+  ],
   "messages": [
     {
       "userId": "1",
@@ -24,6 +30,11 @@
       "userId": "1",
       "message": "This is also Evan",
       "id": 2
+    },
+    {
+      "userId": "2",
+      "message": "this is a second person",
+      "id": 3
     }
   ],
   "news": [

@@ -9,7 +9,7 @@ function taskAll() {
     bTasks.taskPopulate();
     // ----------To Do Button
     const tmButton = $('#task-main-btn')  // The button that opens the task stuff
-    const taskMain = $('#task-main')  // The task stuff
+    const taskMain = $('#task-mains')  // The task stuff
     taskMain.hide(); // Sets the task interface initially to hidden.
     function hider(e) {
         taskMain.toggle(400);
@@ -29,84 +29,59 @@ function taskAll() {
         // console.log($(`#${e.target.id}`));
         // console.log(e.target.previousElementSibling.textContent);
         // console.log(e.target);
-        const targetTask = $(`#${e.target.id}.task-card`)
+        const targetTask = $(`#${e.target.id}.task-card`);
         // console.log(targetTask)
-        targetTask.hide()
-        AJ.putTask(sessionStorage.getItem("User"), targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // USERID USED HERE
+        const targetTitle = $(`#${e.target.id}.task-card-title`)
+        // targetTitle.css('font-size', '1.8em');
+        targetTitle.addClass('strike');
+        targetTask.fadeOut(1300);
+        AJ.putTask(sessionStorage.getItem("User"), targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // SET TO TRUE
     }
     taskDiv.on('click', ".task-complete-btn", completed)
     //----------------------------
 
     //-------------Submit Button
     function makeTask(e) {
-        console.log("makeTask");
-        const title = $('#task-title');
-        const date = $('#task-time');
-        // console.log('make task', title.val(), date.val()) // USERID USED HERE
-        AJ.postTask(sessionStorage.getItem("User"), title.val(), false, date.val())
-            .then(bTasks.taskPopulate())
+        if (event.which == 13) {
+            // console.log("makeTask");
+            const title = $('#task-title');
+            const date = $('#task-time');
+            AJ.postTask(sessionStorage.getItem("User"), title.text(), false, date.val())
+                .then(() => {
+                    bTasks.taskPopulate();
+                    $("br").remove();
+                })
+        }
     }
 
 
 
-    taskDiv.on('click', "#task-make-btn", makeTask)
-
-    //--------------------------------
-
-    //-------------Edit Submit Button
-    function editSubmit(passId) {
-        const title = $('#task-edit-title');
-        const date = $('#task-edit-time');
-        // console.log(id);
-        // console.log(targetTask) // USERID USED HERE
-        AJ.putTask(sessionStorage.getItem("User"), title.val(), 'false', date.val(), passId)
-            .then(bTasks.taskPopulate)
-    }
+    taskDiv.on('keypress', "#task-title", makeTask)
 
 
-    // ----------------------- Edit Button
-    // This builds the edit interface when it is clicked.
     function editTask(e) {
+        if (event.which == 13) {
+            const title = $('.task-card-title');
+            const date = $('.task-card-time');
+            // console.log(id);
+            // console.log(targetTask) // USERID USED HERE
+            AJ.putTask(sessionStorage.getItem("User"), title.text(), 'false', e.target.dataset.date, e.target.id)
+                .then(bTasks.taskPopulate)
+        }
 
-        const editForm = $(`#${e.target.id}`)
-        // console.log(editForm)
-        const today = new moment().format("YYYY-MM-DDThh:mm");
-        const nextWeek = new moment().add(7, 'd').format("YYYY-MM-DDThh:mm")
-        console.log(moment().add(7, 'd').format("YYYY-MM-DDThh:mm"));
-        editForm.append(`
-    <div class="task-main-edit">
-    <fieldset>
-        <legend>Edit Task</legend>
-        <div>
-            <label for="task-title">Title:</label>
-            <input type="text" id="task-edit-title" name="task-title" value="${editForm[0].dataset.title}" />
-        </div>
-        <div>
-            <label for="task-time">Date/time:</label>
-            <input type="datetime-local" id="task-edit-time" name="task-time" 
-            value="${editForm[0].dataset.date}" min="${today}" max="${nextWeek}"
-            />
-        </div>
-
-    </fieldset>
-    <button id="task-make-edit-btn">Submit</button>
-    </div>
-
-`)
-        $(document).on('click', (e) => {
-            if ($.contains(e.target, $('.task-main-edit')[0])) {
-                bTasks.taskPopulate();
-                $(document).off(); // WATCH OUT FOR THIS
-            }
-        })
-        const newForm = $('.task-main-edit')
-        newForm.hide();
-        newForm.show(300);
-        // console.log(newForm);
-        newForm.on('click', "#task-make-edit-btn", () => { editSubmit(e.target.id) })
     }
+    taskDiv.on('keypress', ".task-card-title", editTask)
 
-    taskDiv.on('click', ".task-edit-btn", editTask)
+
+
+    //HOW DOES THIS WORK?
+    $(document).bind('click', function (e) {
+        if ($(e.target).closest('#tasks').length === 0) {
+            taskMain.hide();
+        }
+    });
+
+
 
 };
 

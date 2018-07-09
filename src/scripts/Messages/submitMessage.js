@@ -32,6 +32,7 @@ const submitMess = function () {
             ajax.postMessage(message, userIdNum).then(function (response) {
                 // console.log("this is the message the is being passed to the function:", mess)
                  mess.id = `${response.id}`
+                 
                 })
 
         }

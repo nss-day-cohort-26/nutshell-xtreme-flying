@@ -5,6 +5,7 @@ const ajax = require("./../ajaxCalls.js")
 const subMess = require("./submitMessage")
 const editMess = require("./editMessage")
 const addMessFriend = require("./addFriendMessage")
+// const messageChecker = require("./messageMaster")
 // const currentUser = require("./currentUser")
 
 
@@ -24,55 +25,77 @@ const buildMessageArticle = function () {
 
     $("#messages").append($messageArticle)
 
+
     //this calls the function that adds the event listener to the submit button
     subMess();
 
-    //this executes an ajax call to the api for all of the messages, and then builds message components with an edit function for each.
-    ajax.getField("messages").then(function (messageList) {
-
-        //ajax call returns an array that is then looped through to build each message
-        messageList.forEach(element => {
-            let mess = document.createElement("p")
-
-            //this ajax call gets the userId of the message, which is used to give proper ids to the elements, and will be used to check for current user later on.
-            ajax.getUser(element.userId).then(function (response) {
-
-                let userName = response.name
-
-                mess.textContent = ` ${element.message}` 
-                let currentUse = sessionStorage.getItem("User")
-                // console.log(currentUse) 
-
-                if (element.userId == currentUse) {
-                    mess.classList = `message`
-                    // mess.id = `${response.id}`
-                    $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess);
-                    editMess(mess, userName);
-                } else {
-                    mess.classList = `friendMessage`
-                    // mess.id = `${response.id}`
+    const messageChecker = function () {
+        var previous = null;
+        var current = null;
+        // $("#messages").remove(); 
+        setInterval(function () {
+            $.getJSON("http://localhost:3000/messages", function (json) {
+                current = JSON.stringify(json);
+                if (previous && current && previous !== current) {
+                    // console.log('refresh');
+                    $("#message-box").empty();     
+                    buildMessageDom();
                 }
-                mess.id = `${element.id}`
+                previous = current;
+            });
+        }, 2000);
+    }
+    messageChecker();
 
-                const scrollBottom = require("./scrollBottom")
-                scrollBottom();
 
 
-                $("#message-box").append(mess)
+    //this executes an ajax call to the api for all of the messages, and then builds message components with an edit function for each.
+    const buildMessageDom = function () {
+        ajax.getField("messages?_expand=user").then(function (messageList) {
 
-                let nameBtn = document.createElement("p")
-                nameBtn.className = "nameBtn"
-                nameBtn.id = `${response.id}`
-                nameBtn.textContent = `${response.name}: `
-                mess.prepend(nameBtn)
-                addMessFriend(nameBtn);
+            //ajax call returns an array that is then looped through to build each message
+            messageList.forEach(element => {
+                let mess = document.createElement("p")
 
-            })
-        }
-        )
-    })
+                //this ajax call gets the userId of the message, which is used to give proper ids to the elements, and will be used to check for current user later on.
+                // ajax.getUser(element.userId).then(function (response) {
+
+                    let userName = element.user.name
+
+                    mess.textContent = ` ${element.message}`
+                    let currentUse = sessionStorage.getItem("User")
+                    // console.log(currentUse) 
+
+                    if (element.userId == currentUse) {
+                        mess.classList = `message`
+                        // mess.id = `${response.id}`
+                        $("<button>").attr('type', 'button').attr('class', 'edit-btn').text("Edit").appendTo(mess);
+                        editMess(mess, userName);
+                    } else {
+                        mess.classList = `friendMessage`
+                        // mess.id = `${response.id}`
+                    }
+                    mess.id = `${element.id}`
+
+                    const scrollBottom = require("./scrollBottom")
+                    scrollBottom();
+
+
+                    $("#message-box").append(mess)
+
+                    let nameBtn = document.createElement("p")
+                    nameBtn.className = "nameBtn"
+                    nameBtn.id = `${element.user.id}`
+                    nameBtn.textContent = `${element.user.name}:`  
+                    mess.prepend(nameBtn)
+                    addMessFriend(nameBtn);
+
+                })
+            }
+            )
+    }
+    buildMessageDom();
 }
-
 
 
 

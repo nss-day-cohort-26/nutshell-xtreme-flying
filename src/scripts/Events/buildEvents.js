@@ -50,24 +50,32 @@ class buildEventSection {
         `);
         //this appends the entire modal to the section inside main div
         $("#eventModal").append(modal);
+        $("#saveEventButton").on("click", addNewEvent)
+
 
     }
-//this method is what makes events in the event-holder div
-buildSingleEvent() {
-    return ajax.getField('events').then((eventsArray) =>  { //this ajax call needs to expand for current user.. that's the next step for this
-        $("#events-holder").empty();
-        //this is writing to the DOM each event as well as the editing button
-        eventsArray.forEach(eventObject => {
-            //appends to the event holder
-            $("#events-holder").append($(`
+
+    //this method is what makes events in the event-holder div
+    buildSingleEvent() {
+        return ajax.getField('events').then((eventsArray) => { //this ajax call needs to expand for current user.. that's the next step for this
+            $("#events-holder").empty();
+            //this is writing to the DOM each event as well as the editing button
+            eventsArray.forEach(eventObject => {
+                ajax.allFriends()
+                    .then(fList => {
+                        //appends to the event holder
+                        fList.push(sessionStorage.getItem('User'));
+                        console.log(fList);
+                        if (fList.includes(eventObject.userId)) {
+                            $("#events-holder").append(`
                 <section class = "${eventObject.userId}" id = "${eventObject.id}">
                     <div id="name">${eventObject.name}</div>
                     <div id="location">${eventObject.location}</div>
                     <div id="date">${eventObject.date}</div>
                     <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#modal${eventObject.id}">Edit</button>
-                </section>`))
-                //this is the editing modal that opens when the edit button is clicked... this loads on page load
-                let editModal = $(`
+                </section>`)
+                            //this is the editing modal that opens when the edit button is clicked... this loads on page load
+                            let editModal = `
                 <div class="modal" id = "modal${eventObject.id}" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -95,46 +103,44 @@ buildSingleEvent() {
             </div>
           </div>
         </div>
-        `)
+        `
 
 
-        $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
+                            $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
+                        }
+
+                    });
+                $("#events").on("click", ".btn-edit", editEvent)
+
+
+            });
         });
-        $("#events").on("click", ".btn-edit", editEvent)
-        $("#saveEventButton").on("click", addNewEvent)
-
-
-    })
+    }
 }
-
-}
-
-
-
 const makeAnEvent = new buildEventSection;
-// makeAnEvent.buildEventCreateSection();
-// makeAnEvent.buildSingleEvent();
+        // makeAnEvent.buildEventCreateSection();
+        // makeAnEvent.buildSingleEvent();
 
-function editEvent() {
-    console.log("edit event", event.target.id);
+        function editEvent() {
+            console.log("edit event", event.target.id);
 
-    ajax.getField(`events/${event.target.id}`).then((eventInfo) => {
-        console.log("INFO", eventInfo.name);
-        $(`#editEventInput${eventInfo.id}`).val(eventInfo.name);
-        $(`#editEventLocation${eventInfo.id}`).val(eventInfo.location);
-        $(`#editEventParty-time${eventInfo.id}`).val(eventInfo.date);
-    })
-}
+            ajax.getField(`events/${event.target.id}`).then((eventInfo) => {
+                console.log("INFO", eventInfo.name);
+                $(`#editEventInput${eventInfo.id}`).val(eventInfo.name);
+                $(`#editEventLocation${eventInfo.id}`).val(eventInfo.location);
+                $(`#editEventParty-time${eventInfo.id}`).val(eventInfo.date);
+            })
+        }
 
-function addNewEvent() {
-    console.log('addNewEvent');
-    let name = document.getElementById("eventInput").value;
-    let loc = document.getElementById("location").value;
-    let dateTime = document.getElementById("party-time").value;
-    let user = 1; // this is going to be obtained with session storage I believe
-    ajax.postEvent(user, name, loc, dateTime).then(
-        makeAnEvent.buildSingleEvent());
-}
+        function addNewEvent() {
+            console.log('addNewEvent');
+            let name = document.getElementById("eventInput").value;
+            let loc = document.getElementById("location").value;
+            let dateTime = document.getElementById("party-time").value;
+            let user = sessionStorage.getItem('User'); // this is going to be obtained with session storage I believe
+            ajax.postEvent(user, name, loc, dateTime).then(
+                makeAnEvent.buildSingleEvent());
+        }
 
 
-module.exports = makeAnEvent;
+        module.exports = makeAnEvent;

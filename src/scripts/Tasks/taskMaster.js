@@ -32,10 +32,9 @@ function taskAll() {
         const targetTask = $(`#${e.target.id}.task-card`);
         // console.log(targetTask)
         const targetTitle = $(`#${e.target.id}.task-card-title`)
-        targetTitle.css('font-size', '1.8em');
-        // targetTitle.css('text-decoration', 'line-through');
+        // targetTitle.css('font-size', '1.8em');
         targetTitle.addClass('strike');
-        targetTask.fadeOut(1100);
+        targetTask.fadeOut(1300);
         AJ.putTask(sessionStorage.getItem("User"), targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // SET TO TRUE
     }
     taskDiv.on('click', ".task-complete-btn", completed)
@@ -48,7 +47,7 @@ function taskAll() {
             const title = $('#task-title');
             const date = $('#task-time');
             AJ.postTask(sessionStorage.getItem("User"), title.text(), false, date.val())
-                .then(() => {   
+                .then(() => {
                     bTasks.taskPopulate();
                     $("br").remove();
                 })
@@ -75,13 +74,12 @@ function taskAll() {
 
 
 
-    $(document).on('click', (e) => {
-        if ($.contains(e.target, $('.task-mains')[0])) {  //try contains something else
+    //HOW DOES THIS WORK?
+    $(document).bind('click', function (e) {
+        if ($(e.target).closest('#tasks').length === 0) {
             taskMain.hide();
-            // $(document).off(); // WATCH OUT FOR THIS
         }
-    })
-
+    });
 
 
 

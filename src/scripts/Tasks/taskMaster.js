@@ -29,10 +29,14 @@ function taskAll() {
         // console.log($(`#${e.target.id}`));
         // console.log(e.target.previousElementSibling.textContent);
         // console.log(e.target);
-        const targetTask = $(`#${e.target.id}.task-card`)
+        const targetTask = $(`#${e.target.id}.task-card`);
         // console.log(targetTask)
-        targetTask.hide()
-        AJ.putTask(sessionStorage.getItem("User"), targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // USERID USED HERE
+        const targetTitle = $(`#${e.target.id}.task-card-title`)
+        targetTitle.css('font-size', '1.8em');
+        // targetTitle.css('text-decoration', 'line-through');
+        targetTitle.addClass('strike');
+        targetTask.fadeOut(1100);
+        AJ.putTask(sessionStorage.getItem("User"), targetTask[0].dataset.title, 'true', targetTask[0].dataset.date, e.target.id) // SET TO TRUE
     }
     taskDiv.on('click', ".task-complete-btn", completed)
     //----------------------------
@@ -44,7 +48,10 @@ function taskAll() {
             const title = $('#task-title');
             const date = $('#task-time');
             AJ.postTask(sessionStorage.getItem("User"), title.text(), false, date.val())
-                .then(bTasks.taskPopulate())
+                .then(() => {   
+                    bTasks.taskPopulate();
+                    $("br").remove();
+                })
         }
     }
 

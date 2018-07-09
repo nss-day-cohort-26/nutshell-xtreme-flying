@@ -180,38 +180,17 @@
   "tasks": [
     {
       "userId": "3",
-      "task": "0  test edit",
-      "date": "2018-07-15T12:01",
+      "task": "new trial",
+      "date": "2018-07-15T10:53",
       "completed": "true",
       "id": 1
     },
     {
       "userId": "3",
-      "task": "new task?",
-      "date": "2018-07-15T12:23",
+      "task": "again",
+      "date": "2018-07-15T10:53",
       "completed": "true",
       "id": 2
-    },
-    {
-      "userId": "3",
-      "task": " New Edit yeah ",
-      "date": "2018-07-15T12:23",
-      "completed": "true",
-      "id": 3
-    },
-    {
-      "userId": "3",
-      "task": "New task",
-      "date": "2018-07-15T12:29",
-      "completed": "true",
-      "id": 4
-    },
-    {
-      "userId": "3",
-      "task": "newer task",
-      "date": "2018-07-15T12:38",
-      "completed": "true",
-      "id": 5
     }
   ]
 }

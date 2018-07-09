@@ -308,8 +308,16 @@ span.psw {
 
 .task-card-time {
     margin: 0;
+    font-size: 0.7em;
 }
 
+.task-card-title {
+    display: inline-block;
+    margin: 0;
+    transition: all 0.3s cubic-bezier(0.21, 1.65, 1, 1.01);
+    font-size: 1.3em;
+    width: auto;
+}
 .task-card {
     font-size: 1.3em;
 }
@@ -327,7 +335,6 @@ span.psw {
     color: white;
     margin: 0;
 }
-
 
 .task-complete-btn {
   display: inline-block;
@@ -385,3 +392,32 @@ textarea {
     border-radius: 25px;
 }
 
+#task-list {
+    margin-top: 3vh;
+}
+
+
+/* EXPERIMENTAL */
+@keyframes strike{
+    0%   { width : 0; }
+    100% { width: 100%; }
+  }
+  .strike {
+    position: relative;
+  }
+  .strike:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    white-space: nowrap;
+    height: 3px;
+    background: white;
+    animation-name: strike;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+    /* ------------------------------- */

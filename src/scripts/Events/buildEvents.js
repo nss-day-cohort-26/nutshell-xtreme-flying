@@ -57,7 +57,7 @@ class buildEventSection {
 
     //this method is what makes events in the event-holder div
     buildSingleEvent() {
-        return ajax.getField('events').then((eventsArray) => { //this ajax call needs to expand for current user.. that's the next step for this
+        return ajax.getField('events?_sort=date&_order=asc').then((eventsArray) => { //this ajax call needs to expand for current user.. that's the next step for this
             $("#events-holder").empty();
             //this is writing to the DOM each event as well as the editing button
             eventsArray.forEach(eventObject => {
@@ -65,14 +65,14 @@ class buildEventSection {
                     .then(fList => {
                         //appends to the event holder
                         fList.push(sessionStorage.getItem('User'));
-                        console.log(fList);
                         if (fList.includes(eventObject.userId)) {
                             $("#events-holder").append(`
-                            <section class = "${eventObject.userId}" id = "${eventObject.id}">
+                            <section class = "${eventObject.userId} italics" id ="${eventObject.id}">
                                 <div id="name">${eventObject.name}</div>
                                 <div id="location">${eventObject.location}</div>
                                 <div id="date">${eventObject.date}</div>
                                 <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#modal${eventObject.id}">Edit</button>
+                                <button type="button" class="btn-delete btn-primary" id ="${eventObject.id}">Delete</button>
                             </section>`)
                             //this is the editing modal that opens when the edit button is clicked... this loads on page load
                             let editModal = `
@@ -108,12 +108,17 @@ class buildEventSection {
 
                             $("#editEventModal").append(editModal); // appends the modal to the editEventModal div
                         }
+                        $(`.${sessionStorage.getItem("User")}`).removeClass("italics")
+                        $('.btn-delete').hide()
+                        $(`.${sessionStorage.getItem("User")} button:last-child`).show()
+                        $("#events-holder section:first-child").addClass("bold-and-cornsilk")
 
                     });
                 $("#events").on("click", ".btn-edit", editEvent)
             });
         });
     }
+
 }
 const makeAnEvent = new buildEventSection;
         // makeAnEvent.buildEventCreateSection();

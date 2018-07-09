@@ -15,6 +15,8 @@ class buildLogin {
         const loginDiv = $('#login');
         const wholePage = $('#page');
         wholePage.empty();
+        $('#userName-top').empty();
+        loginDiv.empty();
         loginDiv.append(`
         <button id="login-btn" class="logbut lb">Login</button>
         <button id="register-btn" class="logbut lb">Register</button>
@@ -99,6 +101,7 @@ class buildLogin {
         loginDiv.empty();
         const wholePage = $('#page');
         wholePage.append(`
+        
         <button id="logreg">Log In</button>
         <div id="tasks" class="features"></div>
         <section class="nutshell">
@@ -111,9 +114,11 @@ class buildLogin {
             <div id="friends" class="features"></div>
           </section>
         </section>
+    
         `)
         const logreg = $('#logreg');
         wholePage.on('click', '#logreg', () => {
+            wholePage.empty();
             this.Build();
             loginAll();
             sessionStorage.setItem("User", 0);

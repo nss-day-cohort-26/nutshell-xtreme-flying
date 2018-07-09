@@ -1,5 +1,6 @@
 const $ = require('jquery');
 const ajax = require('../ajaxCalls')
+const moment = require(`moment`)
 
 //making objects to hold all of the functions
 class buildEventSection {
@@ -57,7 +58,7 @@ class buildEventSection {
 
     //this method is what makes events in the event-holder div
     buildSingleEvent() {
-        return ajax.getField('events?_sort=date&_order=asc').then((eventsArray) => { //this ajax call needs to expand for current user.. that's the next step for this
+        ajax.getField('events?_sort=date&_order=asc').then((eventsArray) => { //this ajax call needs to expand for current user.. that's the next step for this
             $("#events-holder").empty();
             //this is writing to the DOM each event as well as the editing button
             eventsArray.forEach(eventObject => {
@@ -66,11 +67,12 @@ class buildEventSection {
                         //appends to the event holder
                         fList.push(sessionStorage.getItem('User'));
                         if (fList.includes(eventObject.userId)) {
+                            const date = moment(eventObject.date).format("dddd, MMMM Do YYYY, h:mm:ss a")
                             $("#events-holder").append(`
                             <section class = "${eventObject.userId} italics" id ="${eventObject.id}">
                                 <div id="name">${eventObject.name}</div>
                                 <div id="location">${eventObject.location}</div>
-                                <div id="date">${eventObject.date}</div>
+                                <div id="date">${date}</div>
                                 <button type="button" class="btn-edit btn-primary" id ="${eventObject.id}" data-toggle="modal" data-target="#modal${eventObject.id}">Edit</button>
                                 <button type="button" class="btn-delete btn-primary" id ="${eventObject.id}">Delete</button>
                             </section>`)

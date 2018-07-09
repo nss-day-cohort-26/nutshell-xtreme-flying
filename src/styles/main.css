@@ -70,6 +70,7 @@ button .delete {
    height: auto;
    width: 90%;
    display: flex;
+   min-height: 30%;
 }
 
 

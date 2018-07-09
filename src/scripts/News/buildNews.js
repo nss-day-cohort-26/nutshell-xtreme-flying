@@ -73,7 +73,7 @@ buildNews: {
                 })
             })
             }
-            getArticles()
+            getArticles();
         }
     },
 clearDom: {

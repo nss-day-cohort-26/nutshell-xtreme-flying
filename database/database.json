@@ -140,6 +140,26 @@
       "userId": "3",
       "yourId": "4",
       "id": 47
+    },
+    {
+      "userId": "8",
+      "yourId": "5",
+      "id": 48
+    },
+    {
+      "userId": "4",
+      "yourId": "5",
+      "id": 49
+    },
+    {
+      "userId": "6",
+      "yourId": "5",
+      "id": 50
+    },
+    {
+      "userId": "2",
+      "yourId": "5",
+      "id": 51
     }
   ],
   "messages": [
@@ -187,6 +207,16 @@
       "userId": "4",
       "message": "Hello everyone",
       "id": 10
+    },
+    {
+      "userId": "5",
+      "message": "hi everyonnnneeee",
+      "id": 11
+    },
+    {
+      "userId": "8",
+      "message": "hey leaahhh its ur mom",
+      "id": 12
     }
   ],
   "news": [
@@ -251,6 +281,20 @@
       "location": "Home",
       "date": "2018-07-10T20:30",
       "id": 11
+    },
+    {
+      "userId": "5",
+      "name": "Dancing Swing",
+      "location": "Green park",
+      "date": "2018-07-25T19:30",
+      "id": 12
+    },
+    {
+      "userId": "8",
+      "name": "Presenting project",
+      "location": "nss",
+      "date": "2018-07-09T14:30",
+      "id": 13
     }
   ],
   "tasks": [
@@ -393,6 +437,13 @@
       "date": "2018-07-13T06:52",
       "completed": "false",
       "id": 21
+    },
+    {
+      "userId": "5",
+      "task": "...eat pizza",
+      "date": "2018-07-16T01:32",
+      "completed": "false",
+      "id": 22
     }
   ]
 }

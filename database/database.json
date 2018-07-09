@@ -232,14 +232,14 @@
       "id": 3
     },
     {
-      "userId": "1",
+      "userId": "4",
       "name": "Hairy Butt Club",
       "location": "Your Mom's House",
       "date": "2018-07-10T19:30",
       "id": 4
     },
     {
-      "userId": "1",
+      "userId": "3",
       "name": "nss PROM",
       "location": "jisie's house",
       "date": "2018-07-18T16:00",
@@ -253,21 +253,21 @@
       "id": 6
     },
     {
-      "userId": "1",
+      "userId": "3",
       "name": "go kayaking",
       "location": "aarons house",
       "date": "2019-07-15T19:30",
       "id": 7
     },
     {
-      "userId": "1",
+      "userId": "2",
       "name": "testin",
       "location": "jaeogn",
       "date": "2018-07-10T19:30",
       "id": 8
     },
     {
-      "userId": "1",
+      "userId": "3",
       "name": "log event",
       "location": "soemf",
       "date": "2018-07-10T19:30",
@@ -291,15 +291,8 @@
   "tasks": [
     {
       "userId": "3",
-      "task": "ewlusky 31",
-      "date": "2018-07-13T01:51",
-      "completed": "false",
-      "id": 1
-    },
-    {
-      "userId": "3",
-      "task": "friday test",
-      "date": "2018-07-13T02:02",
+      "task": "new task",
+      "date": "2018-07-16T09:22",
       "completed": "true",
       "id": 2
     },

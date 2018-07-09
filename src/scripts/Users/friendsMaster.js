@@ -3,6 +3,7 @@ const $ = require("jquery")
 const ajax = require("../ajaxCalls")
 const friendList = require("./buildFriends")
 const news = require("./../News/buildNews")
+const buildEvent = require("./../Events/buildEvents")
 
 const friendsMaster = Object.create({}, { //this function is called upon "add friend" click
     "addNewFriend": {
@@ -15,6 +16,7 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
                         ajax.postFriend(userObject.id, sessionStorage.getItem("User")).then((require) => { // the friend is added to the friends array.
                             friendList.createFriendListComponent(sessionStorage.getItem("User"))
                             news.getArticles()
+                            buildEvent.buildSingleEvent()
                         })
                     }
                 })
@@ -27,6 +29,7 @@ const friendsMaster = Object.create({}, { //this function is called upon "add fr
             ajax.delFriend(event.target.id).then((response)=>{ //makes an ajax call to remove the friend from the friend array.
                 friendList.createFriendListComponent(sessionStorage.getItem("User")) //reloads the dom
                 news.getArticles()
+                buildEvent.buildSingleEvent()
             })
         }
     },
